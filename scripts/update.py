@@ -15,11 +15,11 @@ from pathlib import Path
 LIMIT = 2 * 1024 * 1024
 
 
-def read(url):
+def read_bytes(url, headers=None):
     parsed = urllib.parse.urlsplit(url)
     if parsed.scheme not in ('http', 'https') or not parsed.hostname or parsed.username or parsed.password:
         raise ValueError('Invalid public HTTP endpoint')
-    request = urllib.request.Request(url, headers={'User-Agent': 'CatalogCheck/1.0', 'Accept-Encoding': 'identity'})
+    request = urllib.request.Request(url, headers={'User-Agent': 'CatalogCheck/1.0', 'Accept-Encoding': 'identity', **(headers or {})})
     with urllib.request.urlopen(request, timeout=14) as response:
         data = response.read(LIMIT + 1)
     if len(data) > LIMIT:
@@ -29,7 +29,11 @@ def read(url):
             data = compressed.read(LIMIT + 1)
     if len(data) > LIMIT:
         raise ValueError('Decoded response exceeds 2 MiB')
-    return data.decode('utf-8-sig', errors='replace')
+    return data
+
+
+def read(url):
+    return read_bytes(url).decode('utf-8-sig', errors='replace')
 
 
 def discover(body):

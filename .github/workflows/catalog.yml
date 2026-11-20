@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
+    inputs:
+      full_quality:
+        description: Run the complete quality review now
+        type: boolean
+        default: true
   push:
     branches: [main]
     paths: ['catalog.json', 'scripts/**', 'tests/**', '.github/workflows/catalog.yml']
@@ -16,16 +21,25 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
       - run: python3 -m unittest discover -s tests -v
+      - name: Prepare decoder
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y ffmpeg
+          fi
+      - name: Owned silent and certificate controls
+        run: python3 tests/cloud_controls.py
   maintain:
     if: github.event_name != 'pull_request'
     needs: validate
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 120
     permissions:
       contents: write
     steps:
@@ -37,15 +51,33 @@ jobs:
         with:
           ref: data
           path: published
-      - name: Check metadata without playback
+      - name: Prepare decoder
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y ffmpeg
+          fi
+      - name: Check metadata
         run: python3 tooling/scripts/update.py --catalog tooling/catalog.json --output published
+      - name: Check covers and due quality review
+        env:
+          FORCE_QUALITY: ${{ github.event_name == 'push' || github.event.inputs.full_quality == 'true' }}
+        run: |
+          if [ "$FORCE_QUALITY" = 'true' ]; then
+            python3 tooling/scripts/quality.py --output published --force
+          else
+            python3 tooling/scripts/quality.py --output published
+          fi
       - name: Publish generated data only
         working-directory: published
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add vod.json health.json
+          git add vod.json health.json selection.json
+          for filename in automatic.json covers.json; do
+            if [ -f "$filename" ]; then git add "$filename"; fi
+          done
           if ! git diff --cached --quiet; then
-            git commit -m 'Refresh CMS metadata health and public catalog'
+            git commit -m 'Refresh reviewed configuration'
             git push origin HEAD:data
           fi
