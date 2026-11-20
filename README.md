@@ -13,3 +13,5 @@ Maintenance is scheduled every six hours after the pending maintenance PR is rev
 Local checks: `python3 -m unittest discover -s tests -v`.
 
 This public repository contains no application source, credentials or user data. A public URL does not provide access control.
+
+A manually reviewed selection in the data branch controls which entries are published and their order. Routine metadata checks cannot reintroduce entries excluded by playback review. Playback observations are sample-based and do not certify a particular device or future availability.

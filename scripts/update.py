@@ -148,6 +148,24 @@ def reconcile(results, previous, old_state):
     return sites, state
 
 
+
+def apply_selection(sites, previous, selection):
+    if selection is None:
+        return sites, False
+    keys = selection.get('preferred_keys')
+    if not isinstance(keys, list) or not keys or any(not isinstance(k, str) for k in keys) or len(set(keys)) != len(keys):
+        raise ValueError('Quality selection must contain unique reviewed source keys')
+    current = {site['key']: site for site in sites}
+    selected = [current[key] for key in keys if key in current]
+    if selected:
+        return selected, False
+    old = {site['key']: site for site in previous}
+    retained = [old[key] for key in keys if key in old]
+    if not retained:
+        raise ValueError('No reviewed source remains; refusing an unreviewed replacement')
+    return retained, True
+
+
 def load(path, default):
     return json.loads(path.read_text(encoding='utf-8')) if path.exists() else default
 
@@ -176,8 +194,12 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
         results = list(pool.map(lambda entry: check(entry, by_key.get(entry['key'])), catalog))
     sites, state = reconcile(results, previous, health['state'])
+    selection = load(args.output / 'selection.json', None)
+    sites, retained_preferred = apply_selection(sites, previous, selection)
     report = {'checked_at': datetime.now(timezone.utc).isoformat(), 'scope': 'metadata-only; no media requested',
-              'total': len(catalog), 'healthy': sum(r['ok'] for r in results), 'published': len(sites), 'results': results, 'state': state}
+              'total': len(catalog), 'healthy': sum(r['ok'] for r in results), 'published': len(sites), 'results': results, 'state': state,
+              'quality_review_applied': selection is not None, 'quality_checked_at': selection.get('checked_at') if selection else None,
+              'retained_preferred_snapshot': retained_preferred}
     write(args.output / 'health.json', report)
     if not sites:
         raise RuntimeError('No valid source; refusing to publish an empty configuration')
