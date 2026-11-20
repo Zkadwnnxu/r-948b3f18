@@ -1,0 +1,1349 @@
+{
+  "checked_at": "2026-11-20T22:27:35.620570+00:00",
+  "attempted_epoch": 1795213655.6205897,
+  "started_epoch": 1795213186.7350628,
+  "scope": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
+  "policy": {
+    "baseline_samples": 2,
+    "baseline_seconds": 60,
+    "confirmation_seconds": 120,
+    "max_progress_gap_seconds": 3,
+    "max_active_elapsed_ratio": 1.15,
+    "max_median_first_frame_seconds": 8,
+    "max_single_first_frame_seconds": 12,
+    "cover_required": true,
+    "decode_errors_allowed": 0
+  },
+  "sources": [
+    {
+      "key": "cms_01",
+      "name": "量子资源",
+      "site": {
+        "key": "cms_01",
+        "name": "量子资源",
+        "type": 1,
+        "api": "https://lzzyapi.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "48245",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 1.186
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 4.133,
+            "decoded_seconds": 60.0,
+            "frames": 1439,
+            "audio_stream": true,
+            "video_seconds": 60.0,
+            "audio_seconds": 60.024,
+            "max_progress_gap_seconds": 0.269,
+            "completion_wall_seconds": 62.90544580999999,
+            "wall_seconds": 63.654,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": 0.988,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "47131",
+          "title": "狂飙",
+          "cover": {
+            "ok": true,
+            "seconds": 0.935
+          },
+          "error": "HTTPError: HTTP Error 404: Not Found",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_02",
+      "name": "非凡资源",
+      "site": {
+        "key": "cms_02",
+        "name": "非凡资源",
+        "type": 1,
+        "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "32627",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.552
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "30434",
+          "title": "狂飙",
+          "cover": {
+            "ok": true,
+            "seconds": 0.262
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_03",
+      "name": "闪电资源",
+      "site": {
+        "key": "cms_03",
+        "name": "闪电资源",
+        "type": 1,
+        "api": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "134704",
+          "title": "大千小镇",
+          "cover": {
+            "ok": true,
+            "seconds": 0.107
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "138371",
+          "title": "欢迎回来，初恋。",
+          "cover": {
+            "ok": true,
+            "seconds": 0.078
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_04",
+      "name": "360资源",
+      "site": {
+        "key": "cms_04",
+        "name": "360资源",
+        "type": 1,
+        "api": "https://360zyzz.com/api.php/provide/vod/from/360m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "71142",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 1.267
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 5.065,
+            "decoded_seconds": 60.0,
+            "frames": 1436,
+            "audio_stream": true,
+            "video_seconds": 59.917,
+            "audio_seconds": 60.024,
+            "max_progress_gap_seconds": 0.5,
+            "completion_wall_seconds": 64.090436157,
+            "wall_seconds": 64.975,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": 0.992,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "110202",
+          "title": "好搭档2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.947
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 6.173,
+            "decoded_seconds": 60.0,
+            "frames": 1499,
+            "audio_stream": true,
+            "video_seconds": 60.0,
+            "audio_seconds": 60.024,
+            "max_progress_gap_seconds": 1.751,
+            "completion_wall_seconds": 103.71624288999999,
+            "wall_seconds": 105.683,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": 1.639,
+          "passed": false,
+          "reasons": [
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_05",
+      "name": "新浪资源",
+      "site": {
+        "key": "cms_05",
+        "name": "新浪资源",
+        "type": 1,
+        "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "43851",
+          "title": "流浪地球",
+          "cover": {
+            "ok": true,
+            "seconds": 0.118
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "239545",
+          "title": "恶魔纹章",
+          "cover": {
+            "ok": true,
+            "seconds": 0.144
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_06",
+      "name": "极速资源",
+      "site": {
+        "key": "cms_06",
+        "name": "极速资源",
+        "type": 1,
+        "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "23195",
+          "title": "流浪地球",
+          "cover": {
+            "ok": true,
+            "seconds": 0.305
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "157444",
+          "title": "恶魔纹章",
+          "cover": {
+            "ok": true,
+            "seconds": 0.261
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_07",
+      "name": "索尼资源",
+      "site": {
+        "key": "cms_07",
+        "name": "索尼资源",
+        "type": 1,
+        "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "160022",
+          "title": "女儿生日那天，我决定不再扶贫",
+          "cover": {
+            "ok": true,
+            "seconds": 0.42
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "160023",
+          "title": "月供三小时的爱，我不要了",
+          "cover": {
+            "ok": true,
+            "seconds": 0.443
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_08",
+      "name": "OK资源",
+      "site": {
+        "key": "cms_08",
+        "name": "OK资源",
+        "type": 1,
+        "api": "https://api.okzyw.net/api.php/provide/vod/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "131049",
+          "title": "欢迎回来，初恋。",
+          "cover": {
+            "ok": true,
+            "seconds": 0.128
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "132305",
+          "title": "混在末日，独自成仙",
+          "cover": {
+            "ok": true,
+            "seconds": 0.09
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_09",
+      "name": "电影天堂资源",
+      "site": {
+        "key": "cms_09",
+        "name": "电影天堂资源",
+        "type": 1,
+        "api": "https://api.dyttcj.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "40510",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.313
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "20934",
+          "title": "狂飙",
+          "cover": {
+            "ok": true,
+            "seconds": 0.09
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_11",
+      "name": "无尽资源",
+      "site": {
+        "key": "cms_11",
+        "name": "无尽资源",
+        "type": 1,
+        "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "25734",
+          "title": "流浪地球",
+          "cover": {
+            "ok": true,
+            "seconds": 0.139
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "176041",
+          "title": "女儿生日那天，我决定不再扶贫",
+          "cover": {
+            "ok": true,
+            "seconds": 0.812
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_13",
+      "name": "红牛资源",
+      "site": {
+        "key": "cms_13",
+        "name": "红牛资源",
+        "type": 1,
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "14297",
+          "title": "流浪地球",
+          "cover": {
+            "ok": true,
+            "seconds": 0.385
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 3.523,
+            "decoded_seconds": 60.0,
+            "frames": 1439,
+            "audio_stream": true,
+            "video_seconds": 60.0,
+            "audio_seconds": 60.032,
+            "max_progress_gap_seconds": 0.5,
+            "completion_wall_seconds": 63.04986739300003,
+            "wall_seconds": 63.71,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": 1.0,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "198540",
+          "title": "影子姐妹2026",
+          "cover": {
+            "ok": true,
+            "seconds": 0.26
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 2.521,
+            "decoded_seconds": 60.0,
+            "frames": 1439,
+            "audio_stream": true,
+            "video_seconds": 60.0,
+            "audio_seconds": 60.024,
+            "max_progress_gap_seconds": 0.5,
+            "completion_wall_seconds": 61.54912744000001,
+            "wall_seconds": 62.299,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": 0.992,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "14297",
+          "title": "流浪地球",
+          "cover": {
+            "ok": true,
+            "seconds": 0.266
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 3.018,
+            "decoded_seconds": 120.0,
+            "frames": 2879,
+            "audio_stream": true,
+            "video_seconds": 120.0,
+            "audio_seconds": 120.021,
+            "max_progress_gap_seconds": 0.5,
+            "completion_wall_seconds": 121.815872077,
+            "wall_seconds": 122.532,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 120,
+          "active_elapsed_ratio": 0.994,
+          "passed": true,
+          "reasons": []
+        }
+      ],
+      "qualifies": true
+    },
+    {
+      "key": "cms_15",
+      "name": "虎牙资源",
+      "site": {
+        "key": "cms_15",
+        "name": "虎牙资源",
+        "type": 1,
+        "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "6098",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.169
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "161724",
+          "title": "恶魔纹章",
+          "cover": {
+            "ok": true,
+            "seconds": 0.145
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_16",
+      "name": "豪华资源",
+      "site": {
+        "key": "cms_16",
+        "name": "豪华资源",
+        "type": 1,
+        "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "34380",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.136
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "183556",
+          "title": "恶魔纹章",
+          "cover": {
+            "ok": true,
+            "seconds": 0.1
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_17",
+      "name": "魔都资源",
+      "site": {
+        "key": "cms_17",
+        "name": "魔都资源",
+        "type": 1,
+        "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "84047",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.334
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 0.797,
+            "decoded_seconds": 60.0,
+            "frames": 1499,
+            "audio_stream": true,
+            "video_seconds": 60.0,
+            "audio_seconds": 60.024,
+            "max_progress_gap_seconds": 0.256,
+            "completion_wall_seconds": 59.82180054300005,
+            "wall_seconds": 60.411,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": 0.992,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "95305",
+          "title": "玄幻：天牢三年那个纨绔出狱了",
+          "cover": {
+            "ok": true,
+            "seconds": 0.296
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 0.919,
+            "decoded_seconds": 60.0,
+            "frames": 1499,
+            "audio_stream": true,
+            "video_seconds": 60.0,
+            "audio_seconds": 60.024,
+            "max_progress_gap_seconds": 0.5,
+            "completion_wall_seconds": 59.944200147000004,
+            "wall_seconds": 60.45,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": 0.992,
+          "passed": true,
+          "reasons": []
+        },
+        {
+          "id": "84047",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.102
+          },
+          "decode": {
+            "returncode": 0,
+            "first_frame_seconds": 0.822,
+            "decoded_seconds": 120.0,
+            "frames": 2999,
+            "audio_stream": true,
+            "video_seconds": 120.0,
+            "audio_seconds": 120.024,
+            "max_progress_gap_seconds": 0.251,
+            "completion_wall_seconds": 119.87831620299994,
+            "wall_seconds": 120.436,
+            "termination": "",
+            "errors": []
+          },
+          "target_seconds": 120,
+          "active_elapsed_ratio": 0.996,
+          "passed": true,
+          "reasons": []
+        }
+      ],
+      "qualifies": true
+    },
+    {
+      "key": "cms_18",
+      "name": "光速资源",
+      "site": {
+        "key": "cms_18",
+        "name": "光速资源",
+        "type": 1,
+        "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "95400",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.132
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "223638",
+          "title": "恶魔纹章",
+          "cover": {
+            "ok": true,
+            "seconds": 0.086
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_19",
+      "name": "速播资源",
+      "site": {
+        "key": "cms_19",
+        "name": "速播资源",
+        "type": 1,
+        "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "8040",
+          "title": "流浪地球",
+          "cover": {
+            "ok": true,
+            "seconds": 0.14
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "164110",
+          "title": "恶魔纹章",
+          "cover": {
+            "ok": true,
+            "seconds": 0.14
+          },
+          "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_21",
+      "name": "猫眼资源",
+      "site": {
+        "key": "cms_21",
+        "name": "猫眼资源",
+        "type": 1,
+        "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "137597",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.113
+          },
+          "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "158287",
+          "title": "后会友期",
+          "cover": {
+            "ok": true,
+            "seconds": 0.12
+          },
+          "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_22",
+      "name": "樱花资源",
+      "site": {
+        "key": "cms_22",
+        "name": "樱花资源",
+        "type": 1,
+        "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "105651",
+          "title": "我以岁月换真心",
+          "cover": {
+            "ok": true,
+            "seconds": 0.654
+          },
+          "decode": {
+            "returncode": 183,
+            "first_frame_seconds": 1.129,
+            "decoded_seconds": 5.66,
+            "frames": 133,
+            "audio_stream": true,
+            "video_seconds": 5.617,
+            "audio_seconds": 5.781,
+            "max_progress_gap_seconds": 0.309,
+            "completion_wall_seconds": null,
+            "wall_seconds": 6.743,
+            "termination": "",
+            "errors": [
+              "[hls @ 0x59a863e9a600] keepalive request failed for '<url>' with error: 'Invalid argument' when opening url, retrying with new connection",
+              "[mpegts @ 0x59a864247e40] Packet corrupt (stream = 0, dts = 639192).",
+              "[hls @ 0x59a863e9a600] Packet corrupt (stream = 0, dts = 635362).",
+              "[in#0/hls @ 0x59a863e9a340] corrupt input packet in stream 0",
+              "[in#0/hls @ 0x59a863e9a340] Task finished with error code: -1094995529 (Invalid data found when processing input)",
+              "[in#0/hls @ 0x59a863e9a340] Terminating thread with return code -1094995529 (Invalid data found when processing input)",
+              "Conversion failed!"
+            ]
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "insufficient_video_frames",
+            "stream_errors",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "105650",
+          "title": "傲世狂枭，龙归大海镇九州",
+          "cover": {
+            "ok": true,
+            "seconds": 0.643
+          },
+          "decode": {
+            "returncode": 183,
+            "first_frame_seconds": 1.136,
+            "decoded_seconds": 5.66,
+            "frames": 133,
+            "audio_stream": true,
+            "video_seconds": 5.617,
+            "audio_seconds": 5.781,
+            "max_progress_gap_seconds": 0.374,
+            "completion_wall_seconds": null,
+            "wall_seconds": 6.816,
+            "termination": "",
+            "errors": [
+              "[hls @ 0x5edd632d0600] keepalive request failed for '<url>' with error: 'Invalid argument' when opening url, retrying with new connection",
+              "[mpegts @ 0x5edd6371ac00] Packet corrupt (stream = 0, dts = 639192).",
+              "[hls @ 0x5edd632d0600] Packet corrupt (stream = 0, dts = 635362).",
+              "[in#0/hls @ 0x5edd632d0340] corrupt input packet in stream 0",
+              "[in#0/hls @ 0x5edd632d0340] Task finished with error code: -1094995529 (Invalid data found when processing input)",
+              "[in#0/hls @ 0x5edd632d0340] Terminating thread with return code -1094995529 (Invalid data found when processing input)",
+              "Conversion failed!"
+            ]
+          },
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "insufficient_video_frames",
+            "stream_errors",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_23",
+      "name": "百度资源",
+      "site": {
+        "key": "cms_23",
+        "name": "百度资源",
+        "type": 1,
+        "api": "https://api.apibdzy.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "22254",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.154
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "52497",
+          "title": "两京十五日",
+          "cover": {
+            "ok": true,
+            "seconds": 0.105
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    }
+  ],
+  "state": {
+    "cms_01": {
+      "failures": 1
+    },
+    "cms_02": {
+      "failures": 1
+    },
+    "cms_03": {
+      "failures": 1
+    },
+    "cms_04": {
+      "failures": 1
+    },
+    "cms_05": {
+      "failures": 1
+    },
+    "cms_06": {
+      "failures": 1
+    },
+    "cms_07": {
+      "failures": 1
+    },
+    "cms_08": {
+      "failures": 1
+    },
+    "cms_09": {
+      "failures": 1
+    },
+    "cms_11": {
+      "failures": 1
+    },
+    "cms_13": {
+      "failures": 0
+    },
+    "cms_15": {
+      "failures": 1
+    },
+    "cms_16": {
+      "failures": 1
+    },
+    "cms_17": {
+      "failures": 0
+    },
+    "cms_18": {
+      "failures": 1
+    },
+    "cms_19": {
+      "failures": 1
+    },
+    "cms_21": {
+      "failures": 1
+    },
+    "cms_22": {
+      "failures": 1
+    },
+    "cms_23": {
+      "failures": 1
+    }
+  },
+  "retained_keys": [
+    "cms_01",
+    "cms_02"
+  ],
+  "retained_snapshot": false,
+  "qualified_keys": [
+    "cms_13",
+    "cms_17"
+  ]
+}

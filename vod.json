@@ -1,6 +1,24 @@
 {
   "sites": [
     {
+      "key": "cms_17",
+      "name": "魔都资源",
+      "type": 1,
+      "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "cms_13",
+      "name": "红牛资源",
+      "type": 1,
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
       "key": "cms_01",
       "name": "量子资源",
       "type": 1,

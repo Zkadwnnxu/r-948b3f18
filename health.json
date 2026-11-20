@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-11-20T13:43:19.876714+00:00",
+  "checked_at": "2026-11-20T22:19:46.637708+00:00",
   "scope": "metadata-only; no media requested",
   "total": 23,
-  "healthy": 14,
-  "published": 2,
+  "healthy": 19,
+  "published": 4,
   "results": [
     {
       "key": "cms_01",
@@ -49,18 +49,21 @@
       "key": "cms_03",
       "name": "闪电资源",
       "homepage": "https://shandianzy.com/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
-          "error": "URLError: <urlopen error timed out>"
-        },
-        {
-          "api": "https://xsd.sdzyapi.com/api.php/provide/vod/",
-          "error": "URLError: <urlopen error timed out>"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 59,
+      "items": 20,
+      "search": false,
+      "search_error": "JSONDecodeError",
+      "site": {
+        "key": "cms_03",
+        "name": "闪电资源",
+        "type": 1,
+        "api": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_04",
@@ -86,15 +89,21 @@
       "key": "cms_05",
       "name": "新浪资源",
       "homepage": "https://xinlangzy.com/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
-          "error": "URLError: <urlopen error timed out>"
-        }
-      ],
-      "discovery_error": "URLError",
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 48,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_05",
+        "name": "新浪资源",
+        "type": 1,
+        "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_06",
@@ -120,18 +129,21 @@
       "key": "cms_07",
       "name": "索尼资源",
       "homepage": "https://suonizy.com/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
-          "error": "URLError: <urlopen error timed out>"
-        },
-        {
-          "api": "https://suoniapi.com/api.php/provide/vod/",
-          "error": "URLError: <urlopen error timed out>"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 61,
+      "items": 20,
+      "search": false,
+      "search_error": "JSONDecodeError",
+      "site": {
+        "key": "cms_07",
+        "name": "索尼资源",
+        "type": 1,
+        "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_08",
@@ -190,15 +202,15 @@
       "attempts": [],
       "categories": 63,
       "items": 20,
-      "search": false,
-      "search_error": "HTTPError",
+      "search": true,
+      "search_error": "",
       "site": {
         "key": "cms_11",
         "name": "无尽资源",
         "type": 1,
         "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
+        "searchable": 1,
+        "quickSearch": 1,
         "filterable": 0
       }
     },
@@ -215,12 +227,7 @@
       "name": "红牛资源",
       "homepage": "https://hongniuzy.tv/help/",
       "ok": true,
-      "attempts": [
-        {
-          "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
-          "error": "URLError: <urlopen error [Errno 11004] getaddrinfo failed>"
-        }
-      ],
+      "attempts": [],
       "categories": 44,
       "items": 20,
       "search": true,
@@ -229,7 +236,7 @@
         "key": "cms_13",
         "name": "红牛资源",
         "type": 1,
-        "api": "https://www.hongniuzy3.com/api.php/provide/vod/from/hnm3u8/",
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
         "searchable": 1,
         "quickSearch": 1,
         "filterable": 0
@@ -267,18 +274,21 @@
       "key": "cms_16",
       "name": "豪华资源",
       "homepage": "https://haohuazy.com/index.php/help/index.html",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
-          "error": "URLError: <urlopen error [Errno 11004] getaddrinfo failed>"
-        },
-        {
-          "api": "https://hhzyapi.com/api.php/provide/vod/",
-          "error": "URLError: <urlopen error [Errno 11004] getaddrinfo failed>"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 48,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_16",
+        "name": "豪华资源",
+        "type": 1,
+        "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_17",
@@ -372,14 +382,21 @@
       "key": "cms_22",
       "name": "樱花资源",
       "homepage": "https://yhzy.cc/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
-          "error": "URLError: <urlopen error timed out>"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 33,
+      "items": 20,
+      "search": false,
+      "search_error": "HTTPError",
+      "site": {
+        "key": "cms_22",
+        "name": "樱花资源",
+        "type": 1,
+        "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_23",
@@ -428,7 +445,16 @@
       }
     },
     "cms_03": {
-      "failures": 1
+      "failures": 0,
+      "last_good": {
+        "key": "cms_03",
+        "name": "闪电资源",
+        "type": 1,
+        "api": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
     },
     "cms_04": {
       "failures": 0,
@@ -443,7 +469,16 @@
       }
     },
     "cms_05": {
-      "failures": 1
+      "failures": 0,
+      "last_good": {
+        "key": "cms_05",
+        "name": "新浪资源",
+        "type": 1,
+        "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     },
     "cms_06": {
       "failures": 0,
@@ -458,7 +493,16 @@
       }
     },
     "cms_07": {
-      "failures": 1
+      "failures": 0,
+      "last_good": {
+        "key": "cms_07",
+        "name": "索尼资源",
+        "type": 1,
+        "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
     },
     "cms_08": {
       "failures": 0,
@@ -485,7 +529,7 @@
       }
     },
     "cms_10": {
-      "failures": 1
+      "failures": 2
     },
     "cms_11": {
       "failures": 0,
@@ -494,13 +538,13 @@
         "name": "无尽资源",
         "type": 1,
         "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
+        "searchable": 1,
+        "quickSearch": 1,
         "filterable": 0
       }
     },
     "cms_12": {
-      "failures": 1
+      "failures": 2
     },
     "cms_13": {
       "failures": 0,
@@ -508,14 +552,14 @@
         "key": "cms_13",
         "name": "红牛资源",
         "type": 1,
-        "api": "https://www.hongniuzy3.com/api.php/provide/vod/from/hnm3u8/",
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
         "searchable": 1,
         "quickSearch": 1,
         "filterable": 0
       }
     },
     "cms_14": {
-      "failures": 1
+      "failures": 2
     },
     "cms_15": {
       "failures": 0,
@@ -530,7 +574,16 @@
       }
     },
     "cms_16": {
-      "failures": 1
+      "failures": 0,
+      "last_good": {
+        "key": "cms_16",
+        "name": "豪华资源",
+        "type": 1,
+        "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     },
     "cms_17": {
       "failures": 0,
@@ -569,7 +622,7 @@
       }
     },
     "cms_20": {
-      "failures": 1
+      "failures": 2
     },
     "cms_21": {
       "failures": 0,
@@ -584,7 +637,16 @@
       }
     },
     "cms_22": {
-      "failures": 1
+      "failures": 0,
+      "last_good": {
+        "key": "cms_22",
+        "name": "樱花资源",
+        "type": 1,
+        "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
     },
     "cms_23": {
       "failures": 0,
@@ -601,6 +663,8 @@
   },
   "quality_review_applied": true,
   "quality_checked_at": "2026-11-20T21:51:18.878931+00:00",
-  "quality_report": "playback.json",
-  "retained_preferred_snapshot": false
+  "retained_preferred_snapshot": false,
+  "quality_attempted_at": "2026-11-20T22:27:35.620570+00:00",
+  "quality_environment": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
+  "automatic_report": "automatic.json"
 }
