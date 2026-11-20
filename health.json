@@ -1,0 +1,602 @@
+{
+  "checked_at": "2026-11-20T13:43:19.876714+00:00",
+  "scope": "metadata-only; no media requested",
+  "total": 23,
+  "healthy": 14,
+  "published": 14,
+  "results": [
+    {
+      "key": "cms_01",
+      "name": "量子资源",
+      "homepage": "https://lzizy.net/",
+      "ok": true,
+      "attempts": [],
+      "categories": 40,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_01",
+        "name": "量子资源",
+        "type": 1,
+        "api": "https://lzzyapi.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_02",
+      "name": "非凡资源",
+      "homepage": "https://ffzy.tv/",
+      "ok": true,
+      "attempts": [],
+      "categories": 31,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_02",
+        "name": "非凡资源",
+        "type": 1,
+        "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_03",
+      "name": "闪电资源",
+      "homepage": "https://shandianzy.com/",
+      "ok": false,
+      "attempts": [
+        {
+          "api": "https://xsd.sdzyapi.com/api.php/provide/vod/from/sdm3u8/",
+          "error": "URLError: <urlopen error timed out>"
+        },
+        {
+          "api": "https://xsd.sdzyapi.com/api.php/provide/vod/",
+          "error": "URLError: <urlopen error timed out>"
+        }
+      ],
+      "note": "No endpoint passed metadata validation"
+    },
+    {
+      "key": "cms_04",
+      "name": "360资源",
+      "homepage": "https://www.360zy.com/360zy/help.html",
+      "ok": true,
+      "attempts": [],
+      "categories": 51,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_04",
+        "name": "360资源",
+        "type": 1,
+        "api": "https://360zyzz.com/api.php/provide/vod/from/360m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_05",
+      "name": "新浪资源",
+      "homepage": "https://xinlangzy.com/",
+      "ok": false,
+      "attempts": [
+        {
+          "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/",
+          "error": "URLError: <urlopen error timed out>"
+        }
+      ],
+      "discovery_error": "URLError",
+      "note": "No endpoint passed metadata validation"
+    },
+    {
+      "key": "cms_06",
+      "name": "极速资源",
+      "homepage": "https://www.jisuzy.com/",
+      "ok": true,
+      "attempts": [],
+      "categories": 48,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_06",
+        "name": "极速资源",
+        "type": 1,
+        "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_07",
+      "name": "索尼资源",
+      "homepage": "https://suonizy.com/",
+      "ok": false,
+      "attempts": [
+        {
+          "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
+          "error": "URLError: <urlopen error timed out>"
+        },
+        {
+          "api": "https://suoniapi.com/api.php/provide/vod/",
+          "error": "URLError: <urlopen error timed out>"
+        }
+      ],
+      "note": "No endpoint passed metadata validation"
+    },
+    {
+      "key": "cms_08",
+      "name": "OK资源",
+      "homepage": "https://okzyw.cc/",
+      "ok": true,
+      "attempts": [],
+      "categories": 59,
+      "items": 20,
+      "search": false,
+      "search_error": "JSONDecodeError",
+      "site": {
+        "key": "cms_08",
+        "name": "OK资源",
+        "type": 1,
+        "api": "https://api.okzyw.net/api.php/provide/vod/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_09",
+      "name": "电影天堂资源",
+      "homepage": "https://dyttzy.tv/",
+      "ok": true,
+      "attempts": [],
+      "categories": 32,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_09",
+        "name": "电影天堂资源",
+        "type": 1,
+        "api": "https://api.dyttcj.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_10",
+      "name": "优质资源1080",
+      "homepage": "https://www.1080zyk.com/",
+      "ok": false,
+      "attempts": [],
+      "discovery_error": "HTTPError",
+      "note": "官网403，尚未确认当前公开采集接口"
+    },
+    {
+      "key": "cms_11",
+      "name": "无尽资源",
+      "homepage": "https://www.wujinzy.com/",
+      "ok": true,
+      "attempts": [],
+      "categories": 63,
+      "items": 20,
+      "search": false,
+      "search_error": "HTTPError",
+      "site": {
+        "key": "cms_11",
+        "name": "无尽资源",
+        "type": 1,
+        "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_12",
+      "name": "茅台资源",
+      "homepage": "https://mtzy5.com/",
+      "ok": false,
+      "attempts": [],
+      "note": "官网公告：架构调整，采集接口临时关闭"
+    },
+    {
+      "key": "cms_13",
+      "name": "红牛资源",
+      "homepage": "https://hongniuzy.tv/help/",
+      "ok": true,
+      "attempts": [
+        {
+          "api": "https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/",
+          "error": "URLError: <urlopen error [Errno 11004] getaddrinfo failed>"
+        }
+      ],
+      "categories": 44,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_13",
+        "name": "红牛资源",
+        "type": 1,
+        "api": "https://www.hongniuzy3.com/api.php/provide/vod/from/hnm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_14",
+      "name": "巨量资源",
+      "homepage": "https://juliang.co/",
+      "ok": false,
+      "attempts": [],
+      "note": "官网未公布可直接使用的CMS接口"
+    },
+    {
+      "key": "cms_15",
+      "name": "虎牙资源",
+      "homepage": "https://huyazy.net/help/",
+      "ok": true,
+      "attempts": [],
+      "categories": 44,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_15",
+        "name": "虎牙资源",
+        "type": 1,
+        "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_16",
+      "name": "豪华资源",
+      "homepage": "https://haohuazy.com/index.php/help/index.html",
+      "ok": false,
+      "attempts": [
+        {
+          "api": "https://hhzyapi.com/api.php/provide/vod/from/hhm3u8/",
+          "error": "URLError: <urlopen error [Errno 11004] getaddrinfo failed>"
+        },
+        {
+          "api": "https://hhzyapi.com/api.php/provide/vod/",
+          "error": "URLError: <urlopen error [Errno 11004] getaddrinfo failed>"
+        }
+      ],
+      "note": "No endpoint passed metadata validation"
+    },
+    {
+      "key": "cms_17",
+      "name": "魔都资源",
+      "homepage": "https://mgzy1.tv/help/",
+      "ok": true,
+      "attempts": [],
+      "categories": 55,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_17",
+        "name": "魔都资源",
+        "type": 1,
+        "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_18",
+      "name": "光速资源",
+      "homepage": "https://guangsuzy.com/help/",
+      "ok": true,
+      "attempts": [],
+      "categories": 44,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_18",
+        "name": "光速资源",
+        "type": 1,
+        "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_19",
+      "name": "速播资源",
+      "homepage": "https://www.suboziyuan.net/index.php/help/index.html",
+      "ok": true,
+      "attempts": [],
+      "categories": 44,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_19",
+        "name": "速播资源",
+        "type": 1,
+        "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_20",
+      "name": "饭太硬导航",
+      "homepage": "http://www.xn--sss604efuw.net/",
+      "ok": false,
+      "attempts": [],
+      "note": "这是第三方接口导航，不是单一CMS资源站；不自动引入未审查插件"
+    },
+    {
+      "key": "cms_21",
+      "name": "猫眼资源",
+      "homepage": "https://www.maoyanzy.com/",
+      "ok": true,
+      "attempts": [],
+      "categories": 53,
+      "items": 30,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_21",
+        "name": "猫眼资源",
+        "type": 1,
+        "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    {
+      "key": "cms_22",
+      "name": "樱花资源",
+      "homepage": "https://yhzy.cc/",
+      "ok": false,
+      "attempts": [
+        {
+          "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
+          "error": "URLError: <urlopen error timed out>"
+        }
+      ],
+      "note": "No endpoint passed metadata validation"
+    },
+    {
+      "key": "cms_23",
+      "name": "百度资源",
+      "homepage": "https://bdzy1.com/",
+      "ok": true,
+      "attempts": [],
+      "categories": 54,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_23",
+        "name": "百度资源",
+        "type": 1,
+        "api": "https://api.apibdzy.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    }
+  ],
+  "state": {
+    "cms_01": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_01",
+        "name": "量子资源",
+        "type": 1,
+        "api": "https://lzzyapi.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_02": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_02",
+        "name": "非凡资源",
+        "type": 1,
+        "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_03": {
+      "failures": 1
+    },
+    "cms_04": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_04",
+        "name": "360资源",
+        "type": 1,
+        "api": "https://360zyzz.com/api.php/provide/vod/from/360m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_05": {
+      "failures": 1
+    },
+    "cms_06": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_06",
+        "name": "极速资源",
+        "type": 1,
+        "api": "https://jszyapi.com/api.php/provide/vod/from/jsm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_07": {
+      "failures": 1
+    },
+    "cms_08": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_08",
+        "name": "OK资源",
+        "type": 1,
+        "api": "https://api.okzyw.net/api.php/provide/vod/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
+    },
+    "cms_09": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_09",
+        "name": "电影天堂资源",
+        "type": 1,
+        "api": "https://api.dyttcj.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_10": {
+      "failures": 1
+    },
+    "cms_11": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_11",
+        "name": "无尽资源",
+        "type": 1,
+        "api": "https://api.wujinapi.me/api.php/provide/vod/from/wjm3u8/",
+        "searchable": 0,
+        "quickSearch": 0,
+        "filterable": 0
+      }
+    },
+    "cms_12": {
+      "failures": 1
+    },
+    "cms_13": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_13",
+        "name": "红牛资源",
+        "type": 1,
+        "api": "https://www.hongniuzy3.com/api.php/provide/vod/from/hnm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_14": {
+      "failures": 1
+    },
+    "cms_15": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_15",
+        "name": "虎牙资源",
+        "type": 1,
+        "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_16": {
+      "failures": 1
+    },
+    "cms_17": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_17",
+        "name": "魔都资源",
+        "type": 1,
+        "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_18": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_18",
+        "name": "光速资源",
+        "type": 1,
+        "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_19": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_19",
+        "name": "速播资源",
+        "type": 1,
+        "api": "https://subocj.com/api.php/provide/vod/from/subm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_20": {
+      "failures": 1
+    },
+    "cms_21": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_21",
+        "name": "猫眼资源",
+        "type": 1,
+        "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    },
+    "cms_22": {
+      "failures": 1
+    },
+    "cms_23": {
+      "failures": 0,
+      "last_good": {
+        "key": "cms_23",
+        "name": "百度资源",
+        "type": 1,
+        "api": "https://api.apibdzy.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
+    }
+  }
+}
