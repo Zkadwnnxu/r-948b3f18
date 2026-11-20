@@ -2,6 +2,7 @@
 import argparse
 import concurrent.futures
 import json
+import math
 import os
 import queue
 import re
@@ -48,6 +49,16 @@ def command(binary, url, seconds, ca_file=None):
     return args + ['-i', url, '-map', '0:v:0', '-map', '0:a:0?', '-threads', '2', '-t', str(seconds), '-f', 'null', '-']
 
 
+
+def progress_number(value):
+    if value is None or value in ('', 'N/A'):
+        return 0
+    number = float(value)
+    if not math.isfinite(number):
+        raise ValueError('Non-finite decoder progress')
+    return number
+
+
 def decode(binary, url, seconds, ca_file=None):
     start = time.monotonic()
     process = subprocess.Popen(command(binary, url, seconds, ca_file), stdout=subprocess.PIPE, stderr=subprocess.PIPE,
@@ -84,8 +95,8 @@ def decode(binary, url, seconds, ca_file=None):
                 continue
             key, value = line.split('=', 1); state[key] = value.strip()
             if key == 'progress':
-                count = int(state.get('frame', '0') or '0')
-                current = int(state.get('out_time_us', '0') or '0') / 1e6
+                count = int(progress_number(state.get('frame')))
+                current = progress_number(state.get('out_time_us')) / 1e6
                 duration = max(duration, current)
                 if count > frames:
                     if first is None:

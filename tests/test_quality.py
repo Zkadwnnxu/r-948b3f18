@@ -7,6 +7,9 @@ class QualityRules(unittest.TestCase):
   return {'cover':{'ok':True},'decode':{'returncode':0,'first_frame_seconds':first,'decoded_seconds':target,'frames':target*25,'audio_stream':True,'max_progress_gap_seconds':.5,'errors':[],'completion_wall_seconds':first+elapsed}}
  def accepted(self,key='a',first=2):
   return {'key':key,'site':{'key':key,'api':'https://example.test/api'},'samples':[q.grade(self.sample(first=first),60),q.grade(self.sample(first=first),60),q.grade(self.sample(120,first,120),120)]}
+ def test_initial_progress_na_is_not_a_decode_failure(self):
+  self.assertEqual(q.progress_number('N/A'),0);self.assertEqual(q.progress_number(None),0);self.assertEqual(q.progress_number('1000'),1000)
+  with self.assertRaises(ValueError):q.progress_number('unexpected')
  def test_complete_audio_video_sample_passes(self):self.assertTrue(q.grade(self.sample(),60)['passed'])
  def test_slow_progress_is_not_hidden_by_clean_exit(self):self.assertFalse(q.grade(self.sample(elapsed=90),60)['passed'])
  def test_bad_cover_and_missing_audio_are_not_preferred(self):
