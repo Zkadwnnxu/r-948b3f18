@@ -19,7 +19,7 @@ def read(url):
     parsed = urllib.parse.urlsplit(url)
     if parsed.scheme not in ('http', 'https') or not parsed.hostname or parsed.username or parsed.password:
         raise ValueError('Invalid public HTTP endpoint')
-    request = urllib.request.Request(url, headers={'User-Agent': 'MediaHubTV-Catalog/1.0', 'Accept-Encoding': 'identity'})
+    request = urllib.request.Request(url, headers={'User-Agent': 'CatalogCheck/1.0', 'Accept-Encoding': 'identity'})
     with urllib.request.urlopen(request, timeout=14) as response:
         data = response.read(LIMIT + 1)
     if len(data) > LIMIT:
