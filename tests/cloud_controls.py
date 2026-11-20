@@ -23,7 +23,7 @@ def main():
     with tempfile.TemporaryDirectory()as directory:
         root=Path(directory)
         subprocess.run([binary,'-nostdin','-hide_banner','-loglevel','error','-y','-f','lavfi','-i','testsrc=size=320x180:rate=25',
-                        '-f','lavfi','-i','anullsrc=r=48000:cl=stereo','-t','4','-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p','-c:a','aac',str(root/'owned.mp4')],check=True)
+                        '-f','lavfi','-i','anullsrc=r=48000:cl=stereo','-t','4','-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p','-c:a','aac','-movflags','+faststart',str(root/'owned.mp4')],check=True)
         subprocess.run([binary,'-nostdin','-hide_banner','-loglevel','error','-i',str(root/'owned.mp4'),'-an','-frames:v','1',str(root/'cover.png')],check=True)
         subprocess.run([binary,'-nostdin','-hide_banner','-loglevel','error','-i',str(root/'owned.mp4'),'-c','copy','-f','hls','-hls_time','1','-hls_list_size','0',str(root/'owned.m3u8')],check=True)
         subprocess.run(['openssl','req','-x509','-newkey','rsa:2048','-nodes','-days','1','-subj','/CN=localhost',
