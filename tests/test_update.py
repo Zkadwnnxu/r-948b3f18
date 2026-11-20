@@ -48,6 +48,13 @@ class Selection(unittest.TestCase):
    with mock.patch.object(u,'check',checked),mock.patch('sys.argv',['update.py','--catalog',str(catalog),'--output',str(out)]),contextlib.redirect_stdout(io.StringIO()):u.main()
    self.assertEqual([v['key']for v in json.loads((out/'vod.json').read_text(encoding='utf-8'))['sites']],['b','a'])
    health=json.loads((out/'health.json').read_text(encoding='utf-8'));self.assertEqual(health['healthy'],3);self.assertEqual(health['published'],2);self.assertTrue(health['quality_review_applied'])
+ def test_inspect_only_preserves_original_endpoint(self):
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory);catalog=root/'catalog.json';catalog.write_text('[{"key":"a"}]')
+   old={'sites':[{'key':'a','api':'https://old.test/api'}]};u.write(root/'vod.json',old)
+   def checked(entry,previous):return {'key':'a','ok':True,'site':{'key':'a','api':'https://new.test/api'}}
+   with mock.patch.object(u,'check',checked),mock.patch('sys.argv',['update.py','--catalog',str(catalog),'--output',str(root),'--inspect-only']),contextlib.redirect_stdout(io.StringIO()):u.main()
+   self.assertEqual(u.load(root/'vod.json',None),old)
  def test_missing_selection_preserves_metadata_mode(self):
   sites=[{'key':'x'}]
   self.assertEqual(u.apply_selection(sites,[],None),(sites,False))

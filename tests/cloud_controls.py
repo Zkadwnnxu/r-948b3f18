@@ -26,6 +26,9 @@ def main():
                         '-f','lavfi','-i','anullsrc=r=48000:cl=stereo','-t','4','-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p','-c:a','aac','-movflags','+faststart',str(root/'owned.mp4')],check=True)
         subprocess.run([binary,'-nostdin','-hide_banner','-loglevel','error','-i',str(root/'owned.mp4'),'-an','-frames:v','1',str(root/'cover.png')],check=True)
         subprocess.run([binary,'-nostdin','-hide_banner','-loglevel','error','-i',str(root/'owned.mp4'),'-c','copy','-f','hls','-hls_time','1','-hls_list_size','0',str(root/'owned.m3u8')],check=True)
+        for name, video, audio in [('short-video',1,4),('short-audio',4,1)]:
+            subprocess.run([binary,'-nostdin','-hide_banner','-loglevel','error','-y','-f','lavfi','-t',str(video),'-i','testsrc=size=320x180:rate=25',
+                            '-f','lavfi','-t',str(audio),'-i','anullsrc=r=48000:cl=stereo','-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p','-c:a','aac','-movflags','+faststart',str(root/(name+'.mp4'))],check=True)
         subprocess.run(['openssl','req','-x509','-newkey','rsa:2048','-nodes','-days','1','-subj','/CN=localhost',
                         '-addext','subjectAltName=DNS:localhost,IP:127.0.0.1','-keyout',str(root/'key.pem'),'-out',str(root/'cert.pem')],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         def server(secure=False):
@@ -44,6 +47,9 @@ def main():
             (root/'tls.m3u8').write_text('\n'.join(plain+'/'+line if line and not line.startswith('#') else line for line in playlist.splitlines())+'\n',encoding='utf-8')
             secure_hls=q.decode(binary,secure+'/tls.m3u8',3,root/'cert.pem')
             assert q.grade({'cover':{'ok':True},'decode':secure_hls},3)['passed'],secure_hls
+            for name in ('short-video','short-audio'):
+                short=q.decode(binary,plain+'/'+name+'.mp4',3)
+                assert not q.grade({'cover':{'ok':True},'decode':short},3)['passed'],short
             missing=q.decode(binary,plain+'/missing.mp4',3)
             assert missing['first_frame_seconds']is None and missing['returncode']!=0,missing
             verified=q.decode(binary,secure+'/owned.mp4',3,root/'cert.pem')

@@ -4,9 +4,24 @@ sys.path.insert(0,str(Path(__file__).parents[1]/'scripts'))
 import quality as q
 class QualityRules(unittest.TestCase):
  def sample(self,target=60,first=2,elapsed=60):
-  return {'cover':{'ok':True},'decode':{'returncode':0,'first_frame_seconds':first,'decoded_seconds':target,'frames':target*25,'audio_stream':True,'max_progress_gap_seconds':.5,'errors':[],'completion_wall_seconds':first+elapsed}}
+  return {'cover':{'ok':True},'decode':{'returncode':0,'first_frame_seconds':first,'decoded_seconds':target,'frames':target*25,'audio_stream':True,'video_seconds':target,'audio_seconds':target,'max_progress_gap_seconds':.5,'errors':[],'completion_wall_seconds':first+elapsed}}
  def accepted(self,key='a',first=2):
   return {'key':key,'site':{'key':key,'api':'https://example.test/api'},'samples':[q.grade(self.sample(first=first),60),q.grade(self.sample(first=first),60),q.grade(self.sample(120,first,120),120)]}
+ def test_all_failed_preserves_complete_order_despite_different_counters(self):
+  previous=[{'key':'a'},{'key':'b'}]
+  result=q.choose([{'key':'a','samples':[]},{'key':'b','samples':[]}],previous,{'a':{'failures':2}})
+  self.assertEqual(result['sites'],previous)
+ def test_short_audio_or_video_cannot_pass(self):
+  for track in ['audio_seconds','video_seconds']:
+   s=self.sample();s['decode'][track]=50
+   self.assertFalse(q.grade(s,60)['passed'])
+ def test_errors_after_large_log_are_not_lost(self):
+  evidence=q.Evidence()
+  for _ in range(2100):evidence.feed('ordinary log',0)
+  evidence.feed('Error while decoding',1)
+  self.assertTrue(evidence.errors)
+ def test_daily_slot_does_not_slip_with_finish_time(self):
+  self.assertTrue(q.due({'attempted_epoch':90000,'started_epoch':86400},172810))
  def test_initial_progress_na_is_not_a_decode_failure(self):
   self.assertEqual(q.progress_number('N/A'),0);self.assertEqual(q.progress_number(None),0);self.assertEqual(q.progress_number('1000'),1000)
   with self.assertRaises(ValueError):q.progress_number('unexpected')

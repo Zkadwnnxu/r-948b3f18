@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -51,6 +51,7 @@ jobs:
         with:
           ref: data
           path: published
+          persist-credentials: false
       - name: Prepare decoder
         run: |
           if ! command -v ffmpeg >/dev/null; then
@@ -58,7 +59,7 @@ jobs:
             sudo apt-get install -y ffmpeg
           fi
       - name: Check metadata
-        run: python3 tooling/scripts/update.py --catalog tooling/catalog.json --output published
+        run: python3 tooling/scripts/update.py --catalog tooling/catalog.json --output published --inspect-only
       - name: Check covers and due quality review
         env:
           FORCE_QUALITY: ${{ github.event_name == 'push' || github.event.inputs.full_quality == 'true' }}
@@ -68,6 +69,49 @@ jobs:
           else
             python3 tooling/scripts/quality.py --output published
           fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: generated-data
+          retention-days: 2
+          if-no-files-found: error
+          path: |
+            published/vod.json
+            published/health.json
+            published/selection.json
+            published/automatic.json
+            published/covers.json
+  publish:
+    needs: maintain
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: generated-data
+          path: generated
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: data
+          path: published
+      - name: Validate data and copy allowed files
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, shutil
+          source = pathlib.Path('generated')
+          target = pathlib.Path('published')
+          allowed = {'vod.json', 'health.json', 'selection.json', 'automatic.json', 'covers.json'}
+          for path in source.iterdir():
+              if path.name not in allowed or not path.is_file() or path.is_symlink():
+                  raise ValueError('Unexpected generated file')
+              body = json.loads(path.read_text(encoding='utf-8'))
+              if not isinstance(body, dict): raise ValueError('Invalid generated JSON')
+          vod = json.loads((source / 'vod.json').read_text(encoding='utf-8'))
+          if not vod.get('sites') or any(s.get('type') != 1 or not s.get('api', '').startswith(('https://', 'http://')) for s in vod['sites']):
+              raise ValueError('Invalid publication')
+          for path in source.iterdir(): shutil.copyfile(path, target / path.name)
+          PY
       - name: Publish generated data only
         working-directory: published
         run: |

@@ -40,13 +40,13 @@ def web(url):
 def command(binary, url, seconds, ca_file=None):
     web(url)
     args = [binary, '-nostdin', '-hide_banner', '-loglevel', 'info', '-nostats', '-stats_period', '0.25',
-            '-progress', 'pipe:1', '-filter_threads', '1', '-threads', '2', '-re', '-rw_timeout', '12000000',
+            '-progress', 'pipe:1', '-xerror', '-err_detect', 'explode', '-filter_threads', '1', '-threads', '2', '-re', '-rw_timeout', '12000000',
             '-user_agent', UA, '-protocol_whitelist', 'http,https,tcp,tls,crypto']
     if url.startswith('https://'):
         args += ['-tls_verify', '1']
     if ca_file:
         args += ['-ca_file', str(ca_file)]
-    return args + ['-i', url, '-map', '0:v:0', '-map', '0:a:0?', '-threads', '2', '-t', str(seconds), '-f', 'null', '-']
+    return args + ['-i', url, '-map', '0:v:0', '-map', '0:a:0?', '-threads', '2', '-t', str(seconds), '-vf', 'showinfo', '-af', 'ashowinfo', '-f', 'null', '-']
 
 
 
@@ -59,19 +59,43 @@ def progress_number(value):
     return number
 
 
+class Evidence:
+    def __init__(self):
+        self.errors = []; self.video_start = self.audio_start = None
+        self.video_end = self.audio_end = 0; self.last_video_at = None
+        self.gap = 0; self.audio_stream = False
+
+    def feed(self, line, at):
+        if re.search(r'error|corrupt|failed|invalid data|timed out|certificate|forbidden|not found', line, re.I):
+            self.errors.append(redact(line)); self.errors = self.errors[-12:]
+        if re.search(r'Stream #0:[0-9].*Audio:', line): self.audio_stream = True
+        match = re.search(r'pts_time:([0-9.eE+-]+)', line)
+        if not match: return
+        pts = float(match.group(1))
+        if 'Parsed_ashowinfo' in line:
+            rate = re.search(r'rate:([0-9]+)', line); count = re.search(r'nb_samples:([0-9]+)', line)
+            if not rate or not count: return
+            if self.audio_start is None: self.audio_start = pts
+            self.audio_end = max(self.audio_end, pts - self.audio_start + int(count[1]) / int(rate[1]))
+        elif 'Parsed_showinfo' in line and re.search(r'\bn:\s*[0-9]+', line):
+            if self.video_start is None: self.video_start = pts
+            self.video_end = max(self.video_end, pts - self.video_start)
+            if self.last_video_at is not None: self.gap = max(self.gap, at - self.last_video_at)
+            self.last_video_at = at
+
+
 def decode(binary, url, seconds, ca_file=None):
     start = time.monotonic()
     process = subprocess.Popen(command(binary, url, seconds, ca_file), stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                text=True, encoding='utf-8', errors='replace', bufsize=1,
                                creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
-    events, logs = queue.Queue(), []
+    events, evidence = queue.Queue(), Evidence()
     def output():
         for line in process.stdout:
             events.put((time.monotonic(), line.strip()))
     def logging():
         for line in process.stderr:
-            if len(logs) < 2000:
-                logs.append(redact(line.strip()))
+            evidence.feed(line.strip(), time.monotonic())
     threads = [threading.Thread(target=output, daemon=True), threading.Thread(target=logging, daemon=True)]
     for thread in threads:
         thread.start()
@@ -113,11 +137,11 @@ def decode(binary, url, seconds, ca_file=None):
         for thread in threads:
             thread.join(timeout=2)
         process.stdout.close(); process.stderr.close()
-    errors = [line for line in logs if re.search(r'error|corrupt|failed|invalid data|timed out|certificate|forbidden|not found', line, re.I)]
+    gap = max(gap, evidence.gap)
     return {'returncode': process.returncode, 'first_frame_seconds': round(first, 3) if first is not None else None,
-            'decoded_seconds': round(duration, 3), 'frames': frames, 'audio_stream': any(re.search(r'Stream #0:[0-9].*Audio:', line) for line in logs),
+            'decoded_seconds': round(duration, 3), 'frames': frames, 'audio_stream': evidence.audio_stream, 'video_seconds': round(evidence.video_end, 3), 'audio_seconds': round(evidence.audio_end, 3),
             'max_progress_gap_seconds': round(gap, 3), 'completion_wall_seconds': completion,
-            'wall_seconds': round(time.monotonic() - start, 3), 'termination': stopped, 'errors': errors[-12:]}
+            'wall_seconds': round(time.monotonic() - start, 3), 'termination': stopped, 'errors': evidence.errors}
 
 
 def cover(binary, url):
@@ -141,6 +165,8 @@ def grade(sample, target):
     if not sample.get('cover', {}).get('ok'): reasons.append('cover_failed')
     if d.get('returncode') != 0: reasons.append('decode_failed')
     if d.get('decoded_seconds', 0) < target - .5: reasons.append('duration_incomplete')
+    for track in ('video_seconds', 'audio_seconds'):
+        if d.get(track, 0) < target - .5: reasons.append(track + '_incomplete')
     first = d.get('first_frame_seconds')
     if first is None or first > 12: reasons.append('slow_or_missing_first_frame')
     if not d.get('audio_stream'): reasons.append('missing_audio_decode')
@@ -176,14 +202,15 @@ def choose(reports, previous, old_state):
         if key not in good and state[key]['failures'] < 3:
             sites.append(site); retained.append(key)
     snapshot = not passed
-    if not sites and previous:
+    if not passed and previous:
         sites = list(previous); retained = [s['key'] for s in sites]
     return {'sites': sites, 'keys': [s['key'] for s in sites], 'state': state,
             'retained_keys': retained, 'retained_snapshot': snapshot}
 
 
 def due(report, now=None):
-    return not report or (time.time() if now is None else now) - report.get('attempted_epoch', 0) >= 24 * 3600
+    current = time.time() if now is None else now
+    return not report or int(current // 86400) > int(report.get('started_epoch', report.get('attempted_epoch', 0)) // 86400)
 
 
 def cms(site, **params):
@@ -299,12 +326,13 @@ def main():
     candidates = [r['site'] for r in health.get('results', []) if r.get('ok')]
     full = args.force or due(old_report)
     if full:
+        started = time.time()
         with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
             reports = list(pool.map(lambda site: review(binary, site), candidates))
         result = choose(reports, previous, (old_report or {}).get('state', {}))
         if not result['sites']: raise RuntimeError('No qualifying or last-known source; refusing empty publication')
         now = datetime.now(timezone.utc).isoformat()
-        report = {'checked_at': now, 'attempted_epoch': time.time(), 'scope': SCOPE, 'policy': POLICY,
+        report = {'checked_at': now, 'attempted_epoch': time.time(), 'started_epoch': started, 'scope': SCOPE, 'policy': POLICY,
                   'sources': reports, 'state': result['state'], 'retained_keys': result['retained_keys'],
                   'retained_snapshot': result['retained_snapshot'], 'qualified_keys': [r['key'] for r in reports if r['qualifies']]}
         update.write(out / 'automatic.json', report)

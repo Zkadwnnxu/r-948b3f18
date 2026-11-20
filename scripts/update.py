@@ -184,6 +184,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--catalog', type=Path, default=Path('catalog.json'))
     parser.add_argument('--output', type=Path, default=Path('published'))
+    parser.add_argument('--inspect-only', action='store_true')
     args = parser.parse_args()
     catalog = load(args.catalog, [])
     if not catalog or len({e['key'] for e in catalog}) != len(catalog):
@@ -207,7 +208,8 @@ def main():
     write(args.output / 'health.json', report)
     if not sites:
         raise RuntimeError('No valid source; refusing to publish an empty configuration')
-    write(args.output / 'vod.json', {'sites': sites, 'parses': [], 'lives': []})
+    if not args.inspect_only:
+        write(args.output / 'vod.json', {'sites': sites, 'parses': [], 'lives': []})
     print(json.dumps({'total': len(catalog), 'healthy': report['healthy'], 'published': len(sites), 'media_requests': 0}))
 
 
