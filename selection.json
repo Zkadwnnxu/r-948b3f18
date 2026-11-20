@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "checked_at": "2026-11-20T21:51:18.878931+00:00",
+  "scope": "Windows FFmpeg 9.1 software decode to null; no video window or audio output device. Results apply to these samples and this computer/network, not TV hardware or long-term availability.",
+  "preferred_keys": [
+    "cms_01",
+    "cms_02"
+  ],
+  "report": "playback.json",
+  "policy": {
+    "cover_required": true,
+    "baseline_samples": 2,
+    "baseline_seconds": 60,
+    "confirmation_seconds": 120,
+    "max_progress_gap_seconds": 3,
+    "max_active_elapsed_ratio": 1.15,
+    "max_median_first_frame_seconds": 8,
+    "max_single_first_frame_seconds": 12,
+    "decode_errors_allowed": 0
+  }
+}

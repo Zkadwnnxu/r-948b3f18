@@ -2,6 +2,8 @@
 
 Data: https://raw.githubusercontent.com/Zkadwnnxu/r-948b3f18/data/vod.json
 
-Status: https://raw.githubusercontent.com/Zkadwnnxu/r-948b3f18/data/health.json
+Review: [review.md](review.md) · Observations: [playback.json](playback.json)
 
-This branch stores published configuration files. Automated maintenance is pending review of PR #1. Metadata checks do not verify media playback.
+The default data contains the two preferred entries from the current sample review. The prior full catalog is retained in all.json. These computer/network observations do not certify other devices or future performance.
+
+Automated metadata maintenance remains pending review of PR #1. When enabled, it respects selection.json and cannot automatically reintroduce unreviewed entries.

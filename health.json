@@ -3,7 +3,7 @@
   "scope": "metadata-only; no media requested",
   "total": 23,
   "healthy": 14,
-  "published": 14,
+  "published": 2,
   "results": [
     {
       "key": "cms_01",
@@ -598,5 +598,9 @@
         "filterable": 0
       }
     }
-  }
+  },
+  "quality_review_applied": true,
+  "quality_checked_at": "2026-11-20T21:51:18.878931+00:00",
+  "quality_report": "playback.json",
+  "retained_preferred_snapshot": false
 }

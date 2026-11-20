@@ -1,0 +1,1191 @@
+{
+  "schema": 1,
+  "checked_at": "2026-11-20T21:51:18.878931+00:00",
+  "scope": "Windows FFmpeg 9.1 software decode to null; no video window or audio output device. Results apply to these samples and this computer/network, not TV hardware or long-term availability.",
+  "policy": {
+    "cover_required": true,
+    "baseline_samples": 2,
+    "baseline_seconds": 60,
+    "confirmation_seconds": 120,
+    "max_progress_gap_seconds": 3,
+    "max_active_elapsed_ratio": 1.15,
+    "max_median_first_frame_seconds": 8,
+    "max_single_first_frame_seconds": 12,
+    "decode_errors_allowed": 0
+  },
+  "sources_tested": 14,
+  "network_sample_runs": 32,
+  "controls": {
+    "owned_video_audio_positive": "passed",
+    "http_404_negative": "passed",
+    "audio_output_device_opened": false
+  },
+  "preferred_keys": [
+    "cms_01",
+    "cms_02"
+  ],
+  "sources": [
+    {
+      "key": "cms_01",
+      "name": "量子资源",
+      "assessment": "preferred",
+      "median_first_frame_seconds": 4.201,
+      "samples": [
+        {
+          "first_frame_seconds": 5.231,
+          "decoded_seconds": 60.0,
+          "frames": 1439,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x800",
+          "max_progress_gap_seconds": 0.755,
+          "wall_seconds": 64.844,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "48245",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 0.322,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27821
+          },
+          "active_elapsed_ratio": 0.991,
+          "passed_preference_checks": true,
+          "reasons": []
+        },
+        {
+          "first_frame_seconds": 2.832,
+          "decoded_seconds": 60.0,
+          "frames": 1499,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1080x606",
+          "max_progress_gap_seconds": 1.006,
+          "wall_seconds": 69.002,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "狂飙",
+          "id": "47131",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 0.426,
+            "dimensions": [
+              270,
+              404
+            ],
+            "bytes": 43019
+          },
+          "active_elapsed_ratio": 1.099,
+          "passed_preference_checks": true,
+          "reasons": []
+        },
+        {
+          "first_frame_seconds": 4.201,
+          "decoded_seconds": 120.0,
+          "frames": 2879,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x800",
+          "max_progress_gap_seconds": 0.355,
+          "wall_seconds": 123.682,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "48245",
+          "target_seconds": 120,
+          "cover": {
+            "ok": true,
+            "seconds": 0.266,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27821
+          },
+          "active_elapsed_ratio": 0.995,
+          "passed_preference_checks": true,
+          "reasons": []
+        }
+      ],
+      "finding": "两个60秒样本及一次120秒复测全部通过；优先。"
+    },
+    {
+      "key": "cms_02",
+      "name": "非凡资源",
+      "assessment": "preferred",
+      "median_first_frame_seconds": 5.77,
+      "samples": [
+        {
+          "first_frame_seconds": 6.838,
+          "decoded_seconds": 60.0,
+          "frames": 1439,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x800",
+          "max_progress_gap_seconds": 1.511,
+          "wall_seconds": 68.267,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "32627",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 2.164,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27821
+          },
+          "active_elapsed_ratio": 1.02,
+          "passed_preference_checks": true,
+          "reasons": []
+        },
+        {
+          "first_frame_seconds": 5.77,
+          "decoded_seconds": 60.0,
+          "frames": 1499,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 0.754,
+          "wall_seconds": 65.252,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "狂飙",
+          "id": "30434",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 4.074,
+            "dimensions": [
+              270,
+              404
+            ],
+            "bytes": 43019
+          },
+          "active_elapsed_ratio": 0.989,
+          "passed_preference_checks": true,
+          "reasons": []
+        },
+        {
+          "first_frame_seconds": 4.249,
+          "decoded_seconds": 120.0,
+          "frames": 2879,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x800",
+          "max_progress_gap_seconds": 0.421,
+          "wall_seconds": 123.776,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "32627",
+          "target_seconds": 120,
+          "cover": {
+            "ok": true,
+            "seconds": 0.788,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27821
+          },
+          "active_elapsed_ratio": 0.994,
+          "passed_preference_checks": true,
+          "reasons": []
+        }
+      ],
+      "finding": "两个60秒样本及一次120秒复测全部通过；优先。"
+    },
+    {
+      "key": "cms_04",
+      "name": "360资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 11.96,
+      "samples": [
+        {
+          "first_frame_seconds": 9.341,
+          "decoded_seconds": 60.0,
+          "frames": 1436,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1280x538",
+          "max_progress_gap_seconds": 12.074,
+          "wall_seconds": 88.086,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "71142",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 0.913,
+            "dimensions": [
+              270,
+              387
+            ],
+            "bytes": 17463
+          },
+          "active_elapsed_ratio": 1.293,
+          "passed_preference_checks": false,
+          "reasons": [
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 14.579,
+          "decoded_seconds": 43.979,
+          "frames": 1095,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 3.521,
+          "wall_seconds": 115.341,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "中国唱将2026",
+          "id": "110124",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 0.054,
+            "dimensions": [
+              163,
+              228
+            ],
+            "bytes": 6803
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "slow_first_frame",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "能出画，但出现约12秒进度停顿，另一样本未达到60秒目标。"
+    },
+    {
+      "key": "cms_06",
+      "name": "极速资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 4.419,
+      "samples": [
+        {
+          "first_frame_seconds": 4.726,
+          "decoded_seconds": 60.0,
+          "frames": 1439,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x752",
+          "max_progress_gap_seconds": 1.007,
+          "wall_seconds": 65.125,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球",
+          "id": "23195",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.213,
+            "dimensions": [
+              270,
+              377
+            ],
+            "bytes": 28685
+          },
+          "active_elapsed_ratio": 1.006,
+          "passed_preference_checks": true,
+          "reasons": []
+        },
+        {
+          "first_frame_seconds": 3.612,
+          "decoded_seconds": 60.0,
+          "frames": 1439,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 2.264,
+          "wall_seconds": 83.814,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "逆天至尊",
+          "id": "110",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 2.985,
+            "dimensions": [
+              270,
+              378
+            ],
+            "bytes": 24362
+          },
+          "active_elapsed_ratio": 1.336,
+          "passed_preference_checks": false,
+          "reasons": [
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 4.419,
+          "decoded_seconds": 120.0,
+          "frames": 2879,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x752",
+          "max_progress_gap_seconds": 1.517,
+          "wall_seconds": 153.871,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球",
+          "id": "23195",
+          "target_seconds": 120,
+          "cover": {
+            "ok": true,
+            "seconds": 0.83,
+            "dimensions": [
+              270,
+              377
+            ],
+            "bytes": 28685
+          },
+          "active_elapsed_ratio": 1.234,
+          "passed_preference_checks": false,
+          "reasons": [
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "能连续解码且封面正常，但部分样本进度滞后；120秒媒体复测耗时约154秒，暂作备选。"
+    },
+    {
+      "key": "cms_08",
+      "name": "OK资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 7.6975,
+      "samples": [
+        {
+          "first_frame_seconds": 5.909,
+          "decoded_seconds": 51.44,
+          "frames": 1285,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1280x720",
+          "max_progress_gap_seconds": 2.017,
+          "wall_seconds": 115.381,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "遮天动画版",
+          "id": "34994",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.386,
+            "dimensions": [
+              270,
+              378
+            ],
+            "bytes": 30858
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 9.486,
+          "decoded_seconds": 60.0,
+          "frames": 1499,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1280x720",
+          "max_progress_gap_seconds": 7.043,
+          "wall_seconds": 89.023,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "欢乐集结号",
+          "id": "76850",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 6.379,
+            "dimensions": [
+              270,
+              405
+            ],
+            "bytes": 39309
+          },
+          "active_elapsed_ratio": 1.323,
+          "passed_preference_checks": false,
+          "reasons": [
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "能出画，但有明显进度停顿，一个样本超时未完成。"
+    },
+    {
+      "key": "cms_09",
+      "name": "电影天堂资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 5.0285,
+      "samples": [
+        {
+          "first_frame_seconds": null,
+          "decoded_seconds": 0,
+          "frames": 0,
+          "audio_stream": false,
+          "codec": "",
+          "resolution": "",
+          "max_progress_gap_seconds": 0,
+          "wall_seconds": 4.66,
+          "returncode": 3753488571,
+          "termination": "",
+          "errors": [
+            "[tls @ 000001ae8573a940] Error in the pull function.",
+            "[tls @ 000001ae8573a940] IO error: End of file",
+            "[https @ 000001ae85740c00] Error reading HTTP response: End of file",
+            "[in#0 @ 000001ae8561d280] parse_playlist error End of file [<url>",
+            "[in#0 @ 000001ae8561d000] Error opening input: End of file",
+            "Error opening input file <url>",
+            "Error opening input files: End of file"
+          ],
+          "title": "流浪地球2",
+          "id": "40510",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.727,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27840
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "no_video_frame",
+            "no_audio_stream_decoded",
+            "stream_errors",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 5.814,
+          "decoded_seconds": 60.0,
+          "frames": 1499,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 0.755,
+          "wall_seconds": 65.553,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "狂飙",
+          "id": "20934",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.942,
+            "dimensions": [
+              270,
+              404
+            ],
+            "bytes": 43019
+          },
+          "active_elapsed_ratio": 0.995,
+          "passed_preference_checks": true,
+          "reasons": []
+        },
+        {
+          "first_frame_seconds": 4.243,
+          "decoded_seconds": 60.0,
+          "frames": 1439,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x806",
+          "max_progress_gap_seconds": 0.275,
+          "wall_seconds": 63.785,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "40510",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 0.813,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27840
+          },
+          "active_elapsed_ratio": 0.99,
+          "passed_preference_checks": true,
+          "reasons": []
+        }
+      ],
+      "finding": "首轮一部影片连接中断；另一60秒样本及后续60秒复测通过，暂作备选。"
+    },
+    {
+      "key": "cms_11",
+      "name": "无尽资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 9.4165,
+      "samples": [
+        {
+          "first_frame_seconds": 10.626,
+          "decoded_seconds": 60.0,
+          "frames": 1499,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1280x720",
+          "max_progress_gap_seconds": 7.294,
+          "wall_seconds": 106.985,
+          "returncode": 0,
+          "termination": "",
+          "errors": [
+            "[mpegts @ 000001a1df7b7d40] Packet corrupt (stream = 0, dts = 1922400).",
+            "[in#0/hls @ 000001a1dd8fde00] Packet corrupt (stream = 0, dts = 1918800).",
+            "[in#0/hls @ 000001a1dd8fdc80] corrupt input packet in stream 0"
+          ],
+          "title": "账单全包",
+          "id": "176093",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 4.082,
+            "dimensions": [
+              270,
+              358
+            ],
+            "bytes": 59541
+          },
+          "active_elapsed_ratio": 1.606,
+          "passed_preference_checks": false,
+          "reasons": [
+            "progress_gap_over_3s",
+            "stream_errors",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 8.207,
+          "decoded_seconds": 60.0,
+          "frames": 1499,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1280x720",
+          "max_progress_gap_seconds": 0.755,
+          "wall_seconds": 67.823,
+          "returncode": 0,
+          "termination": "",
+          "errors": [
+            "[mpegts @ 000002970a6947c0] Packet corrupt (stream = 0, dts = 1922400).",
+            "[in#0/hls @ 000002970884fb00] Packet corrupt (stream = 0, dts = 1918800).",
+            "[in#0/hls @ 000002970884f980] corrupt input packet in stream 0"
+          ],
+          "title": "影子姐妹2026",
+          "id": "173752",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.089,
+            "dimensions": [
+              270,
+              337
+            ],
+            "bytes": 51160
+          },
+          "active_elapsed_ratio": 0.989,
+          "passed_preference_checks": false,
+          "reasons": [
+            "stream_errors"
+          ]
+        }
+      ],
+      "finding": "两个样本均出现损坏包/时间戳相关警告，暂不优先。"
+    },
+    {
+      "key": "cms_13",
+      "name": "红牛资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 4.899,
+      "samples": [
+        {
+          "first_frame_seconds": 4.489,
+          "decoded_seconds": 60.0,
+          "frames": 1439,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1280x506",
+          "max_progress_gap_seconds": 3.27,
+          "wall_seconds": 87.217,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "流浪地球",
+          "id": "14297",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 3.136,
+            "dimensions": [
+              472,
+              661
+            ],
+            "bytes": 55974
+          },
+          "active_elapsed_ratio": 1.378,
+          "passed_preference_checks": false,
+          "reasons": [
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 5.309,
+          "decoded_seconds": 60.0,
+          "frames": 1439,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 2.768,
+          "wall_seconds": 85.137,
+          "returncode": 0,
+          "termination": "",
+          "errors": [],
+          "title": "主角系统：我在各界当大佬 动态漫画",
+          "id": "141868",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 10.149,
+            "dimensions": [
+              260,
+              364
+            ],
+            "bytes": 31687
+          },
+          "active_elapsed_ratio": 1.332,
+          "passed_preference_checks": false,
+          "reasons": [
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "样本可解码，但有停顿且媒体进度落后，暂不优先。"
+    },
+    {
+      "key": "cms_15",
+      "name": "虎牙资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 7.6915,
+      "samples": [
+        {
+          "first_frame_seconds": 7.865,
+          "decoded_seconds": 41.912,
+          "frames": 1004,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x804",
+          "max_progress_gap_seconds": 3.771,
+          "wall_seconds": 115.042,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "6098",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.653,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27821
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 7.518,
+          "decoded_seconds": 58.282,
+          "frames": 1396,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 5.03,
+          "wall_seconds": 115.32,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "惠 s CLUB-郑秀彬",
+          "id": "115959",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 0.998,
+            "dimensions": [
+              225,
+              225
+            ],
+            "bytes": 7892
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "两个样本都未在观察时限内完成60秒媒体，暂不优先。"
+    },
+    {
+      "key": "cms_17",
+      "name": "魔都资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 11.903500000000001,
+      "samples": [
+        {
+          "first_frame_seconds": 11.471,
+          "decoded_seconds": 18.88,
+          "frames": 471,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1280x536",
+          "max_progress_gap_seconds": 4.025,
+          "wall_seconds": 115.236,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "84047",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.096,
+            "dimensions": [
+              270,
+              377
+            ],
+            "bytes": 33745
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 12.336,
+          "decoded_seconds": 43.259,
+          "frames": 1077,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "720x1280",
+          "max_progress_gap_seconds": 4.025,
+          "wall_seconds": 115.354,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "别惹我弟，他人狠话不多",
+          "id": "95261",
+          "target_seconds": 60,
+          "cover": {
+            "ok": false,
+            "error": "URLError: <urlopen error timed out>"
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "cover_failed",
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "slow_first_frame",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "起播较慢、媒体进度明显落后，一项封面加载失败。"
+    },
+    {
+      "key": "cms_18",
+      "name": "光速资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 6.6425,
+      "samples": [
+        {
+          "first_frame_seconds": 6.559,
+          "decoded_seconds": 37.5,
+          "frames": 899,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x804",
+          "max_progress_gap_seconds": 3.773,
+          "wall_seconds": 115.376,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "流浪地球2",
+          "id": "95400",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 3.057,
+            "dimensions": [
+              270,
+              401
+            ],
+            "bytes": 27821
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 6.726,
+          "decoded_seconds": 51.989,
+          "frames": 1244,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 5.787,
+          "wall_seconds": 115.291,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "惠 s CLUB-郑秀彬",
+          "id": "177514",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 0.647,
+            "dimensions": [
+              225,
+              225
+            ],
+            "bytes": 7892
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "两个样本都出现明显进度落后并超时。"
+    },
+    {
+      "key": "cms_19",
+      "name": "速播资源",
+      "assessment": "limited",
+      "median_first_frame_seconds": 8.1405,
+      "samples": [
+        {
+          "first_frame_seconds": 8.607,
+          "decoded_seconds": 60.0,
+          "frames": 1342,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x752",
+          "max_progress_gap_seconds": 8.049,
+          "wall_seconds": 95.723,
+          "returncode": 0,
+          "termination": "",
+          "errors": [
+            "[tcp @ 0000020a909195c0] Connection to tcp://g.xlzyd.com:9999 failed: Error number -138 occurred",
+            "[in#0/hls @ 0000020a8dcf0bc0] Failed to open segment 3 of playlist 0",
+            "[in#0/hls @ 0000020a8dcf0bc0] Segment 3 of playlist 0 failed too many times, skipping",
+            "[mpegts @ 0000020a8dd28480] Packet corrupt (stream = 0, dts = 2214750).",
+            "[in#0/hls @ 0000020a8dcf0bc0] Packet corrupt (stream = 0, dts = 2211000).",
+            "[in#0/hls @ 0000020a8dcf0980] corrupt input packet in stream 0"
+          ],
+          "title": "流浪地球",
+          "id": "8040",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 2.037,
+            "dimensions": [
+              270,
+              377
+            ],
+            "bytes": 28685
+          },
+          "active_elapsed_ratio": 1.454,
+          "passed_preference_checks": false,
+          "reasons": [
+            "progress_gap_over_3s",
+            "stream_errors",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": 7.674,
+          "decoded_seconds": 53.708,
+          "frames": 1288,
+          "audio_stream": true,
+          "codec": "h264 (High) ([27][0][0][0] / 0x001B)",
+          "resolution": "1920x1080",
+          "max_progress_gap_seconds": 4.023,
+          "wall_seconds": 115.216,
+          "returncode": 1,
+          "termination": "wall_timeout",
+          "errors": [],
+          "title": "万人之上 动态漫画",
+          "id": "42850",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 1.529,
+            "dimensions": [
+              260,
+              364
+            ],
+            "bytes": 43648
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "progress_gap_over_3s",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "出现分片请求失败及损坏包，另一个样本超时。"
+    },
+    {
+      "key": "cms_21",
+      "name": "猫眼资源",
+      "assessment": "excluded",
+      "median_first_frame_seconds": null,
+      "samples": [
+        {
+          "first_frame_seconds": null,
+          "decoded_seconds": 0,
+          "frames": 0,
+          "audio_stream": false,
+          "codec": "",
+          "resolution": "",
+          "max_progress_gap_seconds": 0,
+          "wall_seconds": 5.669,
+          "returncode": 4294967291,
+          "termination": "",
+          "errors": [
+            "[tls @ 000001dfeab47c00] Peer certificate failed verification",
+            "[in#0 @ 000001dfeaba1640] Error opening input: I/O error",
+            "Error opening input file <url>",
+            "Error opening input files: I/O error"
+          ],
+          "title": "流浪地球2",
+          "id": "137597",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 5.568,
+            "dimensions": [
+              270,
+              377
+            ],
+            "bytes": 28614
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "no_video_frame",
+            "no_audio_stream_decoded",
+            "stream_errors",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": null,
+          "decoded_seconds": 0,
+          "frames": 0,
+          "audio_stream": false,
+          "codec": "",
+          "resolution": "",
+          "max_progress_gap_seconds": 0,
+          "wall_seconds": 0.255,
+          "returncode": 4294967291,
+          "termination": "",
+          "errors": [
+            "[tls @ 000002374cc9d800] Peer certificate failed verification",
+            "[in#0 @ 000002374cc9cf80] Error opening input: I/O error",
+            "Error opening input file <url>",
+            "Error opening input files: I/O error"
+          ],
+          "title": "后会友期",
+          "id": "158287",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 2.366,
+            "dimensions": [
+              262,
+              399
+            ],
+            "bytes": 28941
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "no_video_frame",
+            "no_audio_stream_decoded",
+            "stream_errors",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "两个样本播放域名证书均已过期；没有绕过证书校验。"
+    },
+    {
+      "key": "cms_23",
+      "name": "百度资源",
+      "assessment": "excluded",
+      "median_first_frame_seconds": null,
+      "samples": [
+        {
+          "first_frame_seconds": null,
+          "decoded_seconds": 0,
+          "frames": 0,
+          "audio_stream": false,
+          "codec": "",
+          "resolution": "",
+          "max_progress_gap_seconds": 0,
+          "wall_seconds": 1.256,
+          "returncode": 3199971767,
+          "termination": "",
+          "errors": [
+            "[in#0 @ 000002a1c6e6d7c0] Error opening input: Invalid data found when processing input",
+            "Error opening input file <url>",
+            "Error opening input files: Invalid data found when processing input"
+          ],
+          "title": "流浪地球2",
+          "id": "22254",
+          "target_seconds": 60,
+          "cover": {
+            "ok": true,
+            "seconds": 3.101,
+            "dimensions": [
+              270,
+              377
+            ],
+            "bytes": 33745
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "no_video_frame",
+            "no_audio_stream_decoded",
+            "stream_errors",
+            "insufficient_continuous_progress"
+          ]
+        },
+        {
+          "first_frame_seconds": null,
+          "decoded_seconds": 0,
+          "frames": 0,
+          "audio_stream": false,
+          "codec": "",
+          "resolution": "",
+          "max_progress_gap_seconds": 0,
+          "wall_seconds": 1.661,
+          "returncode": 3199971767,
+          "termination": "",
+          "errors": [
+            "[in#0 @ 000001858274ee80] Error opening input: Invalid data found when processing input",
+            "Error opening input file <url>",
+            "Error opening input files: Invalid data found when processing input"
+          ],
+          "title": "女子奇袭队",
+          "id": "52468",
+          "target_seconds": 60,
+          "cover": {
+            "ok": false,
+            "error": "TimeoutError: The read operation timed out"
+          },
+          "active_elapsed_ratio": null,
+          "passed_preference_checks": false,
+          "reasons": [
+            "cover_failed",
+            "decode_did_not_exit_cleanly",
+            "target_duration_not_reached",
+            "no_video_frame",
+            "no_audio_stream_decoded",
+            "stream_errors",
+            "insufficient_continuous_progress"
+          ]
+        }
+      ],
+      "finding": "分片带75字节JPEG文件头，当前严格解码失败，属兼容风险；一项封面失败。"
+    }
+  ],
+  "diagnosis_limit": "For progress lag, packet warnings and transient network closure, the observed stage is known but the remote server/network root cause is not fully determined. No claim that all titles or all devices fail."
+}
