@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-11-21T07:15:07.076453+00:00",
+  "checked_at": "2026-11-21T19:21:08.854353+00:00",
   "scope": "metadata-only; no media requested",
   "total": 23,
-  "healthy": 19,
+  "healthy": 18,
   "published": 4,
   "results": [
     {
@@ -149,26 +149,18 @@
       "key": "cms_08",
       "name": "OK资源",
       "homepage": "https://okzyw.cc/",
-      "ok": true,
+      "ok": false,
       "attempts": [
+        {
+          "api": "http://api.okzyw.net/api.php/provide/vod/from/okm3u8/",
+          "error": "TimeoutError: timed out"
+        },
         {
           "api": "https://api.okzyw.net/api.php/provide/vod/",
           "error": "TimeoutError: The read operation timed out"
         }
       ],
-      "categories": 59,
-      "items": 20,
-      "search": false,
-      "search_error": "JSONDecodeError",
-      "site": {
-        "key": "cms_08",
-        "name": "OK资源",
-        "type": 1,
-        "api": "http://api.okzyw.net/api.php/provide/vod/from/okm3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
-        "filterable": 0
-      }
+      "note": "No endpoint passed metadata validation"
     },
     {
       "key": "cms_09",
@@ -263,15 +255,15 @@
       "attempts": [],
       "categories": 44,
       "items": 20,
-      "search": true,
+      "search": false,
       "search_error": "",
       "site": {
         "key": "cms_15",
         "name": "虎牙资源",
         "type": 1,
         "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
-        "searchable": 1,
-        "quickSearch": 1,
+        "searchable": 0,
+        "quickSearch": 0,
         "filterable": 0
       }
     },
@@ -323,15 +315,15 @@
       "attempts": [],
       "categories": 44,
       "items": 20,
-      "search": true,
+      "search": false,
       "search_error": "",
       "site": {
         "key": "cms_18",
         "name": "光速资源",
         "type": 1,
         "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
-        "searchable": 1,
-        "quickSearch": 1,
+        "searchable": 0,
+        "quickSearch": 0,
         "filterable": 0
       }
     },
@@ -510,7 +502,7 @@
       }
     },
     "cms_08": {
-      "failures": 0,
+      "failures": 1,
       "last_good": {
         "key": "cms_08",
         "name": "OK资源",
@@ -534,7 +526,7 @@
       }
     },
     "cms_10": {
-      "failures": 3
+      "failures": 4
     },
     "cms_11": {
       "failures": 0,
@@ -549,7 +541,7 @@
       }
     },
     "cms_12": {
-      "failures": 3
+      "failures": 4
     },
     "cms_13": {
       "failures": 0,
@@ -564,7 +556,7 @@
       }
     },
     "cms_14": {
-      "failures": 3
+      "failures": 4
     },
     "cms_15": {
       "failures": 0,
@@ -573,8 +565,8 @@
         "name": "虎牙资源",
         "type": 1,
         "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
-        "searchable": 1,
-        "quickSearch": 1,
+        "searchable": 0,
+        "quickSearch": 0,
         "filterable": 0
       }
     },
@@ -609,8 +601,8 @@
         "name": "光速资源",
         "type": 1,
         "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
-        "searchable": 1,
-        "quickSearch": 1,
+        "searchable": 0,
+        "quickSearch": 0,
         "filterable": 0
       }
     },
@@ -627,7 +619,7 @@
       }
     },
     "cms_20": {
-      "failures": 3
+      "failures": 4
     },
     "cms_21": {
       "failures": 0,
@@ -667,9 +659,6 @@
     }
   },
   "quality_review_applied": true,
-  "quality_checked_at": "2026-11-20T22:27:35.620570+00:00",
-  "retained_preferred_snapshot": false,
-  "quality_attempted_at": "2026-11-21T07:24:26.744477+00:00",
-  "quality_environment": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
-  "automatic_report": "automatic.json"
+  "quality_checked_at": "2026-11-21T07:24:26.744477+00:00",
+  "retained_preferred_snapshot": false
 }
