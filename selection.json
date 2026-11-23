@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checked_at": "2026-11-22T07:04:36.036079+00:00",
+  "checked_at": "2026-11-23T07:52:12.346382+00:00",
   "scope": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
   "preferred_keys": [
     "cms_17",
@@ -19,7 +19,9 @@
     "cover_required": true,
     "decode_errors_allowed": 0
   },
-  "last_attempt_at": "2026-11-22T07:04:36.036079+00:00",
-  "retained_keys": [],
+  "last_attempt_at": "2026-11-23T07:52:12.346382+00:00",
+  "retained_keys": [
+    "cms_01"
+  ],
   "automatic_report": "automatic.json"
 }

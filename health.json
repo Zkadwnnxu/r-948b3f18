@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22T19:45:08.087760+00:00",
+  "checked_at": "2026-11-23T07:44:12.045438+00:00",
   "scope": "metadata-only; no media requested",
   "total": 23,
   "healthy": 19,
@@ -529,7 +529,7 @@
       }
     },
     "cms_10": {
-      "failures": 6
+      "failures": 7
     },
     "cms_11": {
       "failures": 0,
@@ -544,7 +544,7 @@
       }
     },
     "cms_12": {
-      "failures": 6
+      "failures": 7
     },
     "cms_13": {
       "failures": 0,
@@ -559,7 +559,7 @@
       }
     },
     "cms_14": {
-      "failures": 6
+      "failures": 7
     },
     "cms_15": {
       "failures": 0,
@@ -622,7 +622,7 @@
       }
     },
     "cms_20": {
-      "failures": 6
+      "failures": 7
     },
     "cms_21": {
       "failures": 0,
@@ -663,5 +663,8 @@
   },
   "quality_review_applied": true,
   "quality_checked_at": "2026-11-22T07:04:36.036079+00:00",
-  "retained_preferred_snapshot": false
+  "retained_preferred_snapshot": false,
+  "quality_attempted_at": "2026-11-23T07:52:12.346382+00:00",
+  "quality_environment": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
+  "automatic_report": "automatic.json"
 }
