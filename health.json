@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-11-23T07:44:12.045438+00:00",
+  "checked_at": "2026-11-23T23:57:43.614693+00:00",
   "scope": "metadata-only; no media requested",
   "total": 23,
-  "healthy": 19,
+  "healthy": 18,
   "published": 3,
   "results": [
     {
@@ -149,21 +149,18 @@
       "key": "cms_08",
       "name": "OK资源",
       "homepage": "https://okzyw.cc/",
-      "ok": true,
-      "attempts": [],
-      "categories": 59,
-      "items": 20,
-      "search": false,
-      "search_error": "JSONDecodeError",
-      "site": {
-        "key": "cms_08",
-        "name": "OK资源",
-        "type": 1,
-        "api": "http://api.okzyw.net/api.php/provide/vod/from/okm3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
-        "filterable": 0
-      }
+      "ok": false,
+      "attempts": [
+        {
+          "api": "http://api.okzyw.net/api.php/provide/vod/from/okm3u8/",
+          "error": "TimeoutError: timed out"
+        },
+        {
+          "api": "https://api.okzyw.net/api.php/provide/vod/",
+          "error": "TimeoutError: The read operation timed out"
+        }
+      ],
+      "note": "No endpoint passed metadata validation"
     },
     {
       "key": "cms_09",
@@ -505,7 +502,7 @@
       }
     },
     "cms_08": {
-      "failures": 0,
+      "failures": 1,
       "last_good": {
         "key": "cms_08",
         "name": "OK资源",
@@ -529,7 +526,7 @@
       }
     },
     "cms_10": {
-      "failures": 7
+      "failures": 8
     },
     "cms_11": {
       "failures": 0,
@@ -544,7 +541,7 @@
       }
     },
     "cms_12": {
-      "failures": 7
+      "failures": 8
     },
     "cms_13": {
       "failures": 0,
@@ -559,7 +556,7 @@
       }
     },
     "cms_14": {
-      "failures": 7
+      "failures": 8
     },
     "cms_15": {
       "failures": 0,
@@ -622,7 +619,7 @@
       }
     },
     "cms_20": {
-      "failures": 7
+      "failures": 8
     },
     "cms_21": {
       "failures": 0,
@@ -662,9 +659,6 @@
     }
   },
   "quality_review_applied": true,
-  "quality_checked_at": "2026-11-22T07:04:36.036079+00:00",
-  "retained_preferred_snapshot": false,
-  "quality_attempted_at": "2026-11-23T07:52:12.346382+00:00",
-  "quality_environment": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
-  "automatic_report": "automatic.json"
+  "quality_checked_at": "2026-11-23T07:52:12.346382+00:00",
+  "retained_preferred_snapshot": false
 }
