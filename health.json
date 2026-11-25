@@ -1,8 +1,8 @@
 {
-  "checked_at": "2026-11-25T08:40:56.823020+00:00",
+  "checked_at": "2026-11-25T21:46:31.277373+00:00",
   "scope": "metadata-only; no media requested",
   "total": 23,
-  "healthy": 18,
+  "healthy": 19,
   "published": 2,
   "results": [
     {
@@ -294,22 +294,21 @@
       "key": "cms_17",
       "name": "魔都资源",
       "homepage": "https://mgzy1.tv/help/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
-          "error": "HTTPError: HTTP Error 500: Internal Server Error"
-        },
-        {
-          "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/mgtv/",
-          "error": "HTTPError: HTTP Error 500: Internal Server Error"
-        },
-        {
-          "api": "https://caiji.mgzyapi.com/api.php/provide/vod/",
-          "error": "HTTPError: HTTP Error 500: Internal Server Error"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 55,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_17",
+        "name": "魔都资源",
+        "type": 1,
+        "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_18",
@@ -530,7 +529,7 @@
       }
     },
     "cms_10": {
-      "failures": 11
+      "failures": 12
     },
     "cms_11": {
       "failures": 0,
@@ -545,7 +544,7 @@
       }
     },
     "cms_12": {
-      "failures": 11
+      "failures": 12
     },
     "cms_13": {
       "failures": 0,
@@ -560,7 +559,7 @@
       }
     },
     "cms_14": {
-      "failures": 11
+      "failures": 12
     },
     "cms_15": {
       "failures": 0,
@@ -587,7 +586,7 @@
       }
     },
     "cms_17": {
-      "failures": 1,
+      "failures": 0,
       "last_good": {
         "key": "cms_17",
         "name": "魔都资源",
@@ -623,7 +622,7 @@
       }
     },
     "cms_20": {
-      "failures": 11
+      "failures": 12
     },
     "cms_21": {
       "failures": 0,
@@ -663,9 +662,6 @@
     }
   },
   "quality_review_applied": true,
-  "quality_checked_at": "2026-11-24T10:05:59.149290+00:00",
-  "retained_preferred_snapshot": false,
-  "quality_attempted_at": "2026-11-25T08:47:43.257024+00:00",
-  "quality_environment": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
-  "automatic_report": "automatic.json"
+  "quality_checked_at": "2026-11-25T08:47:43.257024+00:00",
+  "retained_preferred_snapshot": false
 }
