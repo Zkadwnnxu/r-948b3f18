@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-11-24T22:31:02.169083+00:00",
+  "checked_at": "2026-11-25T08:40:56.823020+00:00",
   "scope": "metadata-only; no media requested",
   "total": 23,
-  "healthy": 19,
-  "published": 3,
+  "healthy": 18,
+  "published": 2,
   "results": [
     {
       "key": "cms_01",
@@ -258,15 +258,15 @@
       "attempts": [],
       "categories": 44,
       "items": 20,
-      "search": false,
+      "search": true,
       "search_error": "",
       "site": {
         "key": "cms_15",
         "name": "虎牙资源",
         "type": 1,
         "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
+        "searchable": 1,
+        "quickSearch": 1,
         "filterable": 0
       }
     },
@@ -294,21 +294,22 @@
       "key": "cms_17",
       "name": "魔都资源",
       "homepage": "https://mgzy1.tv/help/",
-      "ok": true,
-      "attempts": [],
-      "categories": 55,
-      "items": 20,
-      "search": true,
-      "search_error": "",
-      "site": {
-        "key": "cms_17",
-        "name": "魔都资源",
-        "type": 1,
-        "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
-        "searchable": 1,
-        "quickSearch": 1,
-        "filterable": 0
-      }
+      "ok": false,
+      "attempts": [
+        {
+          "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
+          "error": "HTTPError: HTTP Error 500: Internal Server Error"
+        },
+        {
+          "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/mgtv/",
+          "error": "HTTPError: HTTP Error 500: Internal Server Error"
+        },
+        {
+          "api": "https://caiji.mgzyapi.com/api.php/provide/vod/",
+          "error": "HTTPError: HTTP Error 500: Internal Server Error"
+        }
+      ],
+      "note": "No endpoint passed metadata validation"
     },
     {
       "key": "cms_18",
@@ -318,15 +319,15 @@
       "attempts": [],
       "categories": 44,
       "items": 20,
-      "search": false,
+      "search": true,
       "search_error": "",
       "site": {
         "key": "cms_18",
         "name": "光速资源",
         "type": 1,
         "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
+        "searchable": 1,
+        "quickSearch": 1,
         "filterable": 0
       }
     },
@@ -529,7 +530,7 @@
       }
     },
     "cms_10": {
-      "failures": 10
+      "failures": 11
     },
     "cms_11": {
       "failures": 0,
@@ -544,7 +545,7 @@
       }
     },
     "cms_12": {
-      "failures": 10
+      "failures": 11
     },
     "cms_13": {
       "failures": 0,
@@ -559,7 +560,7 @@
       }
     },
     "cms_14": {
-      "failures": 10
+      "failures": 11
     },
     "cms_15": {
       "failures": 0,
@@ -568,8 +569,8 @@
         "name": "虎牙资源",
         "type": 1,
         "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
+        "searchable": 1,
+        "quickSearch": 1,
         "filterable": 0
       }
     },
@@ -586,7 +587,7 @@
       }
     },
     "cms_17": {
-      "failures": 0,
+      "failures": 1,
       "last_good": {
         "key": "cms_17",
         "name": "魔都资源",
@@ -604,8 +605,8 @@
         "name": "光速资源",
         "type": 1,
         "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
-        "searchable": 0,
-        "quickSearch": 0,
+        "searchable": 1,
+        "quickSearch": 1,
         "filterable": 0
       }
     },
@@ -622,7 +623,7 @@
       }
     },
     "cms_20": {
-      "failures": 10
+      "failures": 11
     },
     "cms_21": {
       "failures": 0,
@@ -663,5 +664,8 @@
   },
   "quality_review_applied": true,
   "quality_checked_at": "2026-11-24T10:05:59.149290+00:00",
-  "retained_preferred_snapshot": false
+  "retained_preferred_snapshot": false,
+  "quality_attempted_at": "2026-11-25T08:47:43.257024+00:00",
+  "quality_environment": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
+  "automatic_report": "automatic.json"
 }
