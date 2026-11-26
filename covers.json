@@ -1,19 +1,19 @@
 {
-  "checked_at": "2026-11-25T21:46:34.857831+00:00",
+  "checked_at": "2026-11-26T21:38:13.899863+00:00",
   "scope": "cover decode only",
   "sources": [
     {
       "key": "cms_13",
       "cover": {
         "ok": true,
-        "seconds": 0.54
+        "seconds": 0.873
       }
     },
     {
       "key": "cms_17",
       "cover": {
         "ok": true,
-        "seconds": 0.446
+        "seconds": 0.29
       }
     }
   ]
