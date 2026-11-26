@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-11-25T08:47:43.257024+00:00",
-  "attempted_epoch": 1795596463.2570412,
-  "started_epoch": 1795596056.9542983,
+  "checked_at": "2026-11-26T08:40:50.181625+00:00",
+  "attempted_epoch": 1795682450.1816509,
+  "started_epoch": 1795682046.1787653,
   "scope": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
   "policy": {
     "baseline_samples": 2,
@@ -33,19 +33,19 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 1.471
+            "seconds": 1.333
           },
           "decode": {
             "returncode": 0,
-            "first_frame_seconds": 3.516,
+            "first_frame_seconds": 3.604,
             "decoded_seconds": 60.0,
             "frames": 1439,
             "audio_stream": true,
             "video_seconds": 60.0,
             "audio_seconds": 60.024,
-            "max_progress_gap_seconds": 0.5,
-            "completion_wall_seconds": 62.290625793000004,
-            "wall_seconds": 63.039,
+            "max_progress_gap_seconds": 0.25,
+            "completion_wall_seconds": 62.377519581,
+            "wall_seconds": 63.126,
             "termination": "",
             "errors": []
           },
@@ -59,7 +59,7 @@
           "title": "狂飙",
           "cover": {
             "ok": true,
-            "seconds": 1.089
+            "seconds": 0.975
           },
           "error": "HTTPError: HTTP Error 404: Not Found",
           "target_seconds": 60,
@@ -97,7 +97,7 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 0.858
+            "seconds": 0.437
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -119,7 +119,7 @@
           "title": "狂飙",
           "cover": {
             "ok": true,
-            "seconds": 0.432
+            "seconds": 0.325
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -153,11 +153,11 @@
       },
       "samples": [
         {
-          "id": "139884",
-          "title": "你为谁诉讼",
+          "id": "139958",
+          "title": "年下他蓄谋已久",
           "cover": {
             "ok": true,
-            "seconds": 0.078
+            "seconds": 0.295
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -175,11 +175,11 @@
           ]
         },
         {
-          "id": "139627",
-          "title": "凤起微月",
+          "id": "139957",
+          "title": "真千金是土匪满朝文武慌了",
           "cover": {
             "ok": true,
-            "seconds": 0.075
+            "seconds": 0.305
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -217,55 +217,53 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 1.11
+            "seconds": 1.014
           },
           "decode": {
             "returncode": 0,
-            "first_frame_seconds": 4.703,
+            "first_frame_seconds": 6.029,
             "decoded_seconds": 60.0,
             "frames": 1436,
             "audio_stream": true,
             "video_seconds": 59.917,
             "audio_seconds": 60.024,
-            "max_progress_gap_seconds": 2.355,
-            "completion_wall_seconds": 75.48098775099999,
-            "wall_seconds": 76.181,
+            "max_progress_gap_seconds": 0.503,
+            "completion_wall_seconds": 65.054054329,
+            "wall_seconds": 65.82,
             "termination": "",
             "errors": []
           },
           "target_seconds": 60,
-          "active_elapsed_ratio": 1.19,
-          "passed": false,
-          "reasons": [
-            "slow_continuous_progress"
-          ]
+          "active_elapsed_ratio": 0.992,
+          "passed": true,
+          "reasons": []
         },
         {
-          "id": "89464",
-          "title": "宝岛西米乐",
+          "id": "100944",
+          "title": "家庭关系证明书",
           "cover": {
-            "ok": true,
-            "seconds": 0.644
+            "ok": false,
+            "error": "HTTPError: HTTP Error 418: I'm a Teapot"
           },
           "decode": {
             "returncode": 0,
-            "first_frame_seconds": 4.841,
+            "first_frame_seconds": 5.301,
             "decoded_seconds": 60.0,
             "frames": 1499,
             "audio_stream": true,
             "video_seconds": 60.0,
             "audio_seconds": 60.024,
-            "max_progress_gap_seconds": 4.56,
-            "completion_wall_seconds": 97.63063249799998,
-            "wall_seconds": 99.455,
+            "max_progress_gap_seconds": 2.501,
+            "completion_wall_seconds": 106.59792761299991,
+            "wall_seconds": 107.083,
             "termination": "",
             "errors": []
           },
           "target_seconds": 60,
-          "active_elapsed_ratio": 1.559,
+          "active_elapsed_ratio": 1.702,
           "passed": false,
           "reasons": [
-            "progress_gap",
+            "cover_failed",
             "slow_continuous_progress"
           ]
         }
@@ -290,7 +288,7 @@
           "title": "流浪地球",
           "cover": {
             "ok": true,
-            "seconds": 0.368
+            "seconds": 0.256
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -308,11 +306,11 @@
           ]
         },
         {
-          "id": "240997",
-          "title": "鹡鸰女神OVA第一次外出",
+          "id": "241082",
+          "title": "別升了！我真想被开除",
           "cover": {
             "ok": true,
-            "seconds": 0.311
+            "seconds": 0.322
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -350,7 +348,7 @@
           "title": "流浪地球",
           "cover": {
             "ok": true,
-            "seconds": 0.575
+            "seconds": 0.504
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -368,11 +366,11 @@
           ]
         },
         {
-          "id": "112090",
-          "title": "大千小镇",
+          "id": "105352",
+          "title": "魔道重生的女武神",
           "cover": {
             "ok": true,
-            "seconds": 0.678
+            "seconds": 0.557
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -406,11 +404,11 @@
       },
       "samples": [
         {
-          "id": "159365",
-          "title": "指环王：力量之戒第三季",
+          "id": "160412",
+          "title": "11月26日 26-27赛季NBA常规赛 骑士VS尼克斯",
           "cover": {
             "ok": true,
-            "seconds": 0.087
+            "seconds": 0.392
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -428,11 +426,11 @@
           ]
         },
         {
-          "id": "160344",
-          "title": "银翼杀手2099",
+          "id": "160411",
+          "title": "11月26日 26-27赛季NBA常规赛 篮网VS雄鹿",
           "cover": {
             "ok": true,
-            "seconds": 0.097
+            "seconds": 0.106
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -466,11 +464,11 @@
       },
       "samples": [
         {
-          "id": "132109",
-          "title": "真男人的旅行法 in 美娜多",
+          "id": "132611",
+          "title": "年下他蓄谋已久",
           "cover": {
             "ok": true,
-            "seconds": 0.248
+            "seconds": 0.279
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -488,11 +486,11 @@
           ]
         },
         {
-          "id": "132537",
-          "title": "你为谁诉讼",
+          "id": "132610",
+          "title": "真千金是土匪满朝文武慌了",
           "cover": {
             "ok": true,
-            "seconds": 0.232
+            "seconds": 0.245
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -530,7 +528,7 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 0.507
+            "seconds": 0.372
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -552,7 +550,7 @@
           "title": "狂飙",
           "cover": {
             "ok": true,
-            "seconds": 0.413
+            "seconds": 0.304
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -590,7 +588,7 @@
           "title": "流浪地球",
           "cover": {
             "ok": true,
-            "seconds": 0.288
+            "seconds": 0.358
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -608,11 +606,11 @@
           ]
         },
         {
-          "id": "175404",
-          "title": "指环王：力量之戒第三季",
+          "id": "176504",
+          "title": "11月26日 26-27赛季NBA常规赛 热火VS76人",
           "cover": {
             "ok": true,
-            "seconds": 0.078
+            "seconds": 0.546
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -650,50 +648,50 @@
           "title": "流浪地球",
           "cover": {
             "ok": true,
-            "seconds": 0.327
+            "seconds": 0.216
           },
           "decode": {
             "returncode": 0,
-            "first_frame_seconds": 4.25,
+            "first_frame_seconds": 4.509,
             "decoded_seconds": 60.0,
             "frames": 1439,
             "audio_stream": true,
             "video_seconds": 60.0,
             "audio_seconds": 60.032,
-            "max_progress_gap_seconds": 0.858,
-            "completion_wall_seconds": 67.275171933,
-            "wall_seconds": 67.892,
+            "max_progress_gap_seconds": 0.75,
+            "completion_wall_seconds": 64.53502525099998,
+            "wall_seconds": 65.134,
             "termination": "",
             "errors": []
           },
           "target_seconds": 60,
-          "active_elapsed_ratio": 1.059,
+          "active_elapsed_ratio": 1.009,
           "passed": true,
           "reasons": []
         },
         {
-          "id": "194810",
-          "title": "大荒妖君，为我赴凡尘",
+          "id": "201047",
+          "title": "完美叔叔3",
           "cover": {
             "ok": true,
-            "seconds": 0.298
+            "seconds": 0.171
           },
           "decode": {
             "returncode": 0,
-            "first_frame_seconds": 3.592,
+            "first_frame_seconds": 3.796,
             "decoded_seconds": 60.0,
             "frames": 1439,
             "audio_stream": true,
             "video_seconds": 60.0,
             "audio_seconds": 60.024,
-            "max_progress_gap_seconds": 0.75,
-            "completion_wall_seconds": 63.80829076499998,
-            "wall_seconds": 64.009,
+            "max_progress_gap_seconds": 1.003,
+            "completion_wall_seconds": 68.82448678000003,
+            "wall_seconds": 69.458,
             "termination": "",
             "errors": []
           },
           "target_seconds": 60,
-          "active_elapsed_ratio": 1.012,
+          "active_elapsed_ratio": 1.093,
           "passed": true,
           "reasons": []
         },
@@ -702,24 +700,24 @@
           "title": "流浪地球",
           "cover": {
             "ok": true,
-            "seconds": 0.339
+            "seconds": 0.183
           },
           "decode": {
             "returncode": 0,
-            "first_frame_seconds": 5.771,
+            "first_frame_seconds": 3.844,
             "decoded_seconds": 120.0,
             "frames": 2879,
             "audio_stream": true,
             "video_seconds": 120.0,
             "audio_seconds": 120.021,
-            "max_progress_gap_seconds": 1.001,
-            "completion_wall_seconds": 129.07925457599998,
-            "wall_seconds": 129.59,
+            "max_progress_gap_seconds": 0.751,
+            "completion_wall_seconds": 123.14799862500001,
+            "wall_seconds": 123.854,
             "termination": "",
             "errors": []
           },
           "target_seconds": 120,
-          "active_elapsed_ratio": 1.032,
+          "active_elapsed_ratio": 0.998,
           "passed": true,
           "reasons": []
         }
@@ -744,7 +742,7 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 0.422
+            "seconds": 0.322
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -762,11 +760,11 @@
           ]
         },
         {
-          "id": "159883",
-          "title": "旺达在哪里第二季",
+          "id": "157640",
+          "title": "妈妈发疯了",
           "cover": {
             "ok": true,
-            "seconds": 0.421
+            "seconds": 0.306
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -804,7 +802,7 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 0.548
+            "seconds": 0.318
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -822,13 +820,73 @@
           ]
         },
         {
-          "id": "185002",
-          "title": "鹡鸰女神OVA第一次外出",
+          "id": "185091",
+          "title": "疯狂魔幻墨西哥",
           "cover": {
             "ok": true,
-            "seconds": 0.583
+            "seconds": 0.341
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        }
+      ],
+      "qualifies": false
+    },
+    {
+      "key": "cms_17",
+      "name": "魔都资源",
+      "site": {
+        "key": "cms_17",
+        "name": "魔都资源",
+        "type": 1,
+        "api": "https://caiji.mgzyapi.com/api.php/provide/vod/from/m3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      },
+      "samples": [
+        {
+          "id": "84047",
+          "title": "流浪地球2",
+          "cover": {
+            "ok": true,
+            "seconds": 0.253
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
+          "target_seconds": 60,
+          "active_elapsed_ratio": null,
+          "passed": false,
+          "reasons": [
+            "decode_failed",
+            "duration_incomplete",
+            "video_seconds_incomplete",
+            "audio_seconds_incomplete",
+            "slow_or_missing_first_frame",
+            "missing_audio_decode",
+            "insufficient_video_frames",
+            "slow_continuous_progress"
+          ]
+        },
+        {
+          "id": "95640",
+          "title": "人在缅国，我靠偷听玉石心声致富",
+          "cover": {
+            "ok": true,
+            "seconds": 0.2
+          },
+          "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
           "active_elapsed_ratio": null,
           "passed": false,
@@ -864,7 +922,7 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 0.361
+            "seconds": 0.348
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -882,11 +940,11 @@
           ]
         },
         {
-          "id": "225091",
-          "title": "鹡鸰女神OVA第一次外出",
+          "id": "225173",
+          "title": "疯狂魔幻墨西哥",
           "cover": {
             "ok": true,
-            "seconds": 0.346
+            "seconds": 0.326
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -924,7 +982,7 @@
           "title": "流浪地球",
           "cover": {
             "ok": true,
-            "seconds": 0.346
+            "seconds": 0.285
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -942,11 +1000,11 @@
           ]
         },
         {
-          "id": "165558",
-          "title": "鹡鸰女神OVA第一次外出",
+          "id": "165646",
+          "title": "疯狂魔幻墨西哥",
           "cover": {
             "ok": true,
-            "seconds": 0.361
+            "seconds": 0.337
           },
           "error": "RemoteDisconnected: Remote end closed connection without response",
           "target_seconds": 60,
@@ -984,7 +1042,7 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 0.408
+            "seconds": 0.384
           },
           "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
           "target_seconds": 60,
@@ -1002,11 +1060,11 @@
           ]
         },
         {
-          "id": "158167",
-          "title": "黑暗机器",
+          "id": "157821",
+          "title": "末誓",
           "cover": {
             "ok": true,
-            "seconds": 0.406
+            "seconds": 0.377
           },
           "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
           "target_seconds": 60,
@@ -1040,31 +1098,31 @@
       },
       "samples": [
         {
-          "id": "105873",
-          "title": "八零老太重生后摆摊馋哭前夫家",
+          "id": "105882",
+          "title": "值得2026",
           "cover": {
             "ok": true,
-            "seconds": 0.474
+            "seconds": 0.735
           },
           "decode": {
             "returncode": 183,
-            "first_frame_seconds": 2.085,
+            "first_frame_seconds": 1.707,
             "decoded_seconds": 5.66,
             "frames": 133,
             "audio_stream": true,
             "video_seconds": 5.617,
             "audio_seconds": 5.781,
-            "max_progress_gap_seconds": 0.47,
+            "max_progress_gap_seconds": 0.489,
             "completion_wall_seconds": null,
-            "wall_seconds": 7.864,
+            "wall_seconds": 7.503,
             "termination": "",
             "errors": [
-              "[hls @ 0x574a73b2e600] keepalive request failed for '<url>' with error: 'Invalid argument' when opening url, retrying with new connection",
-              "[mpegts @ 0x574a73e872c0] Packet corrupt (stream = 0, dts = 639192).",
-              "[hls @ 0x574a73b2e600] Packet corrupt (stream = 0, dts = 635362).",
-              "[in#0/hls @ 0x574a73b2e340] corrupt input packet in stream 0",
-              "[in#0/hls @ 0x574a73b2e340] Task finished with error code: -1094995529 (Invalid data found when processing input)",
-              "[in#0/hls @ 0x574a73b2e340] Terminating thread with return code -1094995529 (Invalid data found when processing input)",
+              "[hls @ 0x5e1c97e66600] keepalive request failed for '<url>' with error: 'Invalid argument' when opening url, retrying with new connection",
+              "[mpegts @ 0x5e1c981b37c0] Packet corrupt (stream = 0, dts = 639192).",
+              "[hls @ 0x5e1c97e66600] Packet corrupt (stream = 0, dts = 635362).",
+              "[in#0/hls @ 0x5e1c97e66340] corrupt input packet in stream 0",
+              "[in#0/hls @ 0x5e1c97e66340] Task finished with error code: -1094995529 (Invalid data found when processing input)",
+              "[in#0/hls @ 0x5e1c97e66340] Terminating thread with return code -1094995529 (Invalid data found when processing input)",
               "Conversion failed!"
             ]
           },
@@ -1082,31 +1140,31 @@
           ]
         },
         {
-          "id": "105872",
-          "title": "大婚当天我撕碎丈夫的赌局",
+          "id": "103771",
+          "title": "魔法骑士雷阿斯2026",
           "cover": {
             "ok": true,
-            "seconds": 0.454
+            "seconds": 0.674
           },
           "decode": {
             "returncode": 183,
-            "first_frame_seconds": 2.075,
+            "first_frame_seconds": 1.7,
             "decoded_seconds": 5.66,
             "frames": 133,
             "audio_stream": true,
             "video_seconds": 5.617,
             "audio_seconds": 5.781,
-            "max_progress_gap_seconds": 0.491,
+            "max_progress_gap_seconds": 0.486,
             "completion_wall_seconds": null,
-            "wall_seconds": 7.874,
+            "wall_seconds": 7.494,
             "termination": "",
             "errors": [
-              "[hls @ 0x5fa1ae3f6600] keepalive request failed for '<url>' with error: 'Invalid argument' when opening url, retrying with new connection",
-              "[mpegts @ 0x5fa1ae786380] Packet corrupt (stream = 0, dts = 639192).",
-              "[hls @ 0x5fa1ae3f6600] Packet corrupt (stream = 0, dts = 635362).",
-              "[in#0/hls @ 0x5fa1ae3f6340] corrupt input packet in stream 0",
-              "[in#0/hls @ 0x5fa1ae3f6340] Task finished with error code: -1094995529 (Invalid data found when processing input)",
-              "[in#0/hls @ 0x5fa1ae3f6340] Terminating thread with return code -1094995529 (Invalid data found when processing input)",
+              "[hls @ 0x64f0a003b600] keepalive request failed for '<url>' with error: 'Invalid argument' when opening url, retrying with new connection",
+              "[mpegts @ 0x64f0a037fec0] Packet corrupt (stream = 0, dts = 639192).",
+              "[hls @ 0x64f0a003b600] Packet corrupt (stream = 0, dts = 635362).",
+              "[in#0/hls @ 0x64f0a003b340] corrupt input packet in stream 0",
+              "[in#0/hls @ 0x64f0a003b340] Task finished with error code: -1094995529 (Invalid data found when processing input)",
+              "[in#0/hls @ 0x64f0a003b340] Terminating thread with return code -1094995529 (Invalid data found when processing input)",
               "Conversion failed!"
             ]
           },
@@ -1144,7 +1202,7 @@
           "title": "流浪地球2",
           "cover": {
             "ok": true,
-            "seconds": 0.37
+            "seconds": 0.387
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -1162,11 +1220,11 @@
           ]
         },
         {
-          "id": "52535",
-          "title": "爱情岛澳大利亚第八季",
+          "id": "52464",
+          "title": "裙下之臣",
           "cover": {
             "ok": true,
-            "seconds": 0.362
+            "seconds": 0.32
           },
           "error": "HTTPError: HTTP Error 403: Forbidden",
           "target_seconds": 60,
@@ -1189,61 +1247,61 @@
   ],
   "state": {
     "cms_01": {
-      "failures": 3
+      "failures": 4
     },
     "cms_02": {
-      "failures": 6
+      "failures": 7
     },
     "cms_03": {
-      "failures": 6
+      "failures": 7
     },
     "cms_04": {
-      "failures": 6
+      "failures": 7
     },
     "cms_05": {
-      "failures": 6
+      "failures": 7
     },
     "cms_06": {
-      "failures": 6
+      "failures": 7
     },
     "cms_07": {
-      "failures": 6
+      "failures": 7
     },
     "cms_08": {
-      "failures": 6
+      "failures": 7
     },
     "cms_09": {
-      "failures": 6
+      "failures": 7
     },
     "cms_11": {
-      "failures": 6
+      "failures": 7
     },
     "cms_13": {
       "failures": 0
     },
     "cms_15": {
-      "failures": 6
+      "failures": 7
     },
     "cms_16": {
-      "failures": 6
-    },
-    "cms_18": {
-      "failures": 6
-    },
-    "cms_19": {
-      "failures": 6
-    },
-    "cms_21": {
-      "failures": 6
-    },
-    "cms_22": {
-      "failures": 6
-    },
-    "cms_23": {
-      "failures": 6
+      "failures": 7
     },
     "cms_17": {
-      "failures": 1
+      "failures": 2
+    },
+    "cms_18": {
+      "failures": 7
+    },
+    "cms_19": {
+      "failures": 7
+    },
+    "cms_21": {
+      "failures": 7
+    },
+    "cms_22": {
+      "failures": 7
+    },
+    "cms_23": {
+      "failures": 7
     }
   },
   "retained_keys": [
