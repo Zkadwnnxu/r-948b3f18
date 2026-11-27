@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-11-26T21:38:10.159909+00:00",
+  "checked_at": "2026-11-27T08:40:00.885384+00:00",
   "scope": "metadata-only; no media requested",
   "total": 23,
-  "healthy": 16,
-  "published": 2,
+  "healthy": 19,
+  "published": 1,
   "results": [
     {
       "key": "cms_01",
@@ -254,18 +254,21 @@
       "key": "cms_15",
       "name": "虎牙资源",
       "homepage": "https://huyazy.net/help/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
-          "error": "TimeoutError: The read operation timed out"
-        },
-        {
-          "api": "https://www.huyaapi.com/api.php/provide/vod/",
-          "error": "TimeoutError: The read operation timed out"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 44,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_15",
+        "name": "虎牙资源",
+        "type": 1,
+        "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_16",
@@ -311,18 +314,21 @@
       "key": "cms_18",
       "name": "光速资源",
       "homepage": "https://guangsuzy.com/help/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
-          "error": "TimeoutError: The read operation timed out"
-        },
-        {
-          "api": "https://api.guangsuapi.com/api.php/provide/vod/",
-          "error": "TimeoutError: The read operation timed out"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 44,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_18",
+        "name": "光速资源",
+        "type": 1,
+        "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     },
     {
       "key": "cms_19",
@@ -396,18 +402,21 @@
       "key": "cms_23",
       "name": "百度资源",
       "homepage": "https://bdzy1.com/",
-      "ok": false,
-      "attempts": [
-        {
-          "api": "https://api.apibdzy.com/api.php/provide/vod/",
-          "error": "TimeoutError: The read operation timed out"
-        },
-        {
-          "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/",
-          "error": "TimeoutError: The read operation timed out"
-        }
-      ],
-      "note": "No endpoint passed metadata validation"
+      "ok": true,
+      "attempts": [],
+      "categories": 54,
+      "items": 20,
+      "search": true,
+      "search_error": "",
+      "site": {
+        "key": "cms_23",
+        "name": "百度资源",
+        "type": 1,
+        "api": "https://api.apibdzy.com/api.php/provide/vod/",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 0
+      }
     }
   ],
   "state": {
@@ -520,7 +529,7 @@
       }
     },
     "cms_10": {
-      "failures": 14
+      "failures": 15
     },
     "cms_11": {
       "failures": 0,
@@ -535,7 +544,7 @@
       }
     },
     "cms_12": {
-      "failures": 14
+      "failures": 15
     },
     "cms_13": {
       "failures": 0,
@@ -550,10 +559,10 @@
       }
     },
     "cms_14": {
-      "failures": 14
+      "failures": 15
     },
     "cms_15": {
-      "failures": 1,
+      "failures": 0,
       "last_good": {
         "key": "cms_15",
         "name": "虎牙资源",
@@ -589,7 +598,7 @@
       }
     },
     "cms_18": {
-      "failures": 1,
+      "failures": 0,
       "last_good": {
         "key": "cms_18",
         "name": "光速资源",
@@ -613,7 +622,7 @@
       }
     },
     "cms_20": {
-      "failures": 14
+      "failures": 15
     },
     "cms_21": {
       "failures": 0,
@@ -640,7 +649,7 @@
       }
     },
     "cms_23": {
-      "failures": 1,
+      "failures": 0,
       "last_good": {
         "key": "cms_23",
         "name": "百度资源",
@@ -654,5 +663,8 @@
   },
   "quality_review_applied": true,
   "quality_checked_at": "2026-11-26T08:40:50.181625+00:00",
-  "retained_preferred_snapshot": false
+  "retained_preferred_snapshot": false,
+  "quality_attempted_at": "2026-11-27T08:46:33.272000+00:00",
+  "quality_environment": "Cloud Linux FFmpeg software decode to null; no display/audio devices. Sample observations for this runner/network, not TV hardware or long-term availability.",
+  "automatic_report": "automatic.json"
 }
